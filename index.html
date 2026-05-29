@@ -1,184 +1,194 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faisal.dev Portfolio</title>
+
+  <title>Faisal Al Aziz | Data Administration Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      background: #0d1117;
-      overflow-x: hidden;
-      font-family: Arial, sans-serif;
-      cursor: none;
+    body{
+      background:#0d1117;
+      overflow-x:hidden;
+      font-family:Arial,sans-serif;
+      cursor:none;
     }
 
-    .cursor {
-      width: 18px;
-      height: 18px;
-      border: 2px solid #34d399;
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      transition: transform .08s ease;
-      box-shadow: 0 0 25px #34d399;
+    .cursor{
+      width:18px;
+      height:18px;
+      border:2px solid #34d399;
+      border-radius:50%;
+      position:fixed;
+      pointer-events:none;
+      transform:translate(-50%,-50%);
+      z-index:9999;
+      transition:transform .08s ease;
+      box-shadow:0 0 25px #34d399;
     }
 
-    .cursor-dot {
-      width: 5px;
-      height: 5px;
-      background: #34d399;
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
+    .cursor-dot{
+      width:5px;
+      height:5px;
+      background:#34d399;
+      border-radius:50%;
+      position:fixed;
+      pointer-events:none;
+      transform:translate(-50%,-50%);
+      z-index:9999;
     }
 
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
+    body::before{
+      content:'';
+      position:fixed;
+      inset:0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-      z-index: -2;
-      animation: gridMove 20s linear infinite;
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size:40px 40px;
+      z-index:-2;
+      animation:gridMove 20s linear infinite;
     }
 
-    @keyframes gridMove {
-      from {
-        transform: translateY(0px);
+    @keyframes gridMove{
+      from{
+        transform:translateY(0px);
       }
-      to {
-        transform: translateY(40px);
-      }
-    }
-
-    .glow {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border-radius: 9999px;
-      filter: blur(120px);
-      z-index: 0;
-      animation: floating 8s ease-in-out infinite;
-    }
-
-    @keyframes floating {
-      0%,100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-30px);
+      to{
+        transform:translateY(40px);
       }
     }
 
-    .glass {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.08);
+    .glow{
+      position:absolute;
+      width:500px;
+      height:500px;
+      border-radius:9999px;
+      filter:blur(120px);
+      z-index:0;
+      animation:floating 8s ease-in-out infinite;
     }
 
-    .card-hover {
-      transition: 0.4s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-hover::before {
-      content: '';
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(52,211,153,0.18), transparent 70%);
-      top: -150px;
-      left: -150px;
-      opacity: 0;
-      transition: .5s;
-    }
-
-    .card-hover:hover::before {
-      opacity: 1;
-    }
-
-    .card-hover:hover {
-      transform: translateY(-15px) scale(1.02);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-    }
-
-    .shine {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .shine::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 80%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transform: skewX(-20deg);
-      animation: shine 4s infinite;
-    }
-
-    @keyframes shine {
-      100% {
-        left: 140%;
+    @keyframes floating{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-30px);
       }
     }
 
-    .typing {
-      border-right: 3px solid #34d399;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(30,end) forwards, blink .7s infinite;
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,0.08);
     }
 
-    @keyframes typing {
-      to {
-        width: 100%;
+    .card-hover{
+      transition:0.4s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card-hover::before{
+      content:'';
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:radial-gradient(circle, rgba(52,211,153,0.18), transparent 70%);
+      top:-150px;
+      left:-150px;
+      opacity:0;
+      transition:.5s;
+    }
+
+    .card-hover:hover::before{
+      opacity:1;
+    }
+
+    .card-hover:hover{
+      transform:translateY(-15px) scale(1.02);
+      box-shadow:0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    .shine{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .shine::after{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-120%;
+      width:80%;
+      height:100%;
+      background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+      );
+      transform:skewX(-20deg);
+      animation:shine 4s infinite;
+    }
+
+    @keyframes shine{
+      100%{
+        left:140%;
       }
     }
 
-    @keyframes blink {
-      50% {
-        border-color: transparent;
+    .typing{
+      border-right:3px solid #34d399;
+      white-space:nowrap;
+      overflow:hidden;
+      width:0;
+      animation:
+      typing 4s steps(30,end) forwards,
+      blink .7s infinite;
+    }
+
+    @keyframes typing{
+      to{
+        width:100%;
       }
     }
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeUp 1s ease forwards;
+    @keyframes blink{
+      50%{
+        border-color:transparent;
+      }
     }
 
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    .fade-up{
+      opacity:0;
+      transform:translateY(40px);
+      animation:fadeUp 1s ease forwards;
+    }
+
+    @keyframes fadeUp{
+      to{
+        opacity:1;
+        transform:translateY(0);
       }
     }
   </style>
 </head>
+
 <body class="text-white relative min-h-screen">
 
   <div class="cursor"></div>
@@ -191,8 +201,9 @@
   <!-- Navbar -->
   <header class="sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl bg-[#0d1117]/80">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
       <h1 class="text-3xl font-bold">
-        Faisal<span class="text-emerald-400">.dev</span>
+        Faisal<span class="text-emerald-400">.data</span>
       </h1>
 
       <nav class="hidden md:flex gap-8 text-gray-300">
@@ -201,6 +212,7 @@
         <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
         <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
       </nav>
+
     </div>
   </header>
 
@@ -208,38 +220,42 @@
   <section class="relative z-10 max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
 
     <div>
+
       <p class="text-emerald-400 uppercase tracking-[4px] text-sm mb-4">
-        Fullstack Developer
+        Data Administration & Data Management
       </p>
 
       <h2 class="text-5xl md:text-7xl font-black leading-tight fade-up">
-        Elegant &
+        Data Management &
         <span class="block bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text">
-          Interactive ✨
+          Reporting ✨
         </span>
-        Portfolio
       </h2>
 
       <p class="text-gray-400 text-lg leading-relaxed mt-8 max-w-xl typing">
-        Saya membuat website modern dengan desain elegan,
-        performa cepat, dan pengalaman pengguna yang interaktif.
+        Berfokus pada pengolahan data, administrasi digital,
+        pelaporan, serta manajemen informasi yang terstruktur dan efisien.
       </p>
 
       <div class="mt-10 flex flex-wrap gap-4">
+
         <a href="#projects"
-          class="px-7 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 transition text-black font-semibold shadow-lg shadow-emerald-500/20">
+        class="px-7 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 transition text-black font-semibold shadow-lg shadow-emerald-500/20">
           Explore Projects
         </a>
 
         <a href="https://github.com" target="_blank"
-          class="px-7 py-3 rounded-2xl glass hover:bg-white/10 transition">
+        class="px-7 py-3 rounded-2xl glass hover:bg-white/10 transition">
           GitHub Profile
         </a>
+
       </div>
+
     </div>
 
     <!-- Hero Card -->
     <div class="relative">
+
       <div class="glass rounded-3xl p-6 shadow-2xl shadow-black/40 shine">
 
         <div class="flex gap-2 mb-6">
@@ -249,195 +265,363 @@
         </div>
 
         <div class="font-mono text-sm space-y-4">
-          <div class="text-emerald-400">const developer = {</div>
-          <div class="pl-6 text-gray-300">name: 'Faisal Al Aziz',</div>
-          <div class="pl-6 text-gray-300">role: 'Fullstack Developer',</div>
-          <div class="pl-6 text-gray-300">focus: 'Elegant UI & Dashboard',</div>
-          <div class="pl-6 text-gray-300">status: 'Available for Project'</div>
-          <div class="text-emerald-400">}</div>
+
+          <div class="text-emerald-400">
+            const profile = {
+          </div>
+
+          <div class="pl-6 text-gray-300">
+            name: 'Faisal Al Aziz',
+          </div>
+
+          <div class="pl-6 text-gray-300">
+            role: 'Data Administration & Data Management',
+          </div>
+
+          <div class="pl-6 text-gray-300">
+            focus: 'Reporting, Data Processing & Information Management',
+          </div>
+
+          <div class="pl-6 text-gray-300">
+            status: 'Open for Opportunity'
+          </div>
+
+          <div class="text-emerald-400">
+            }
+          </div>
+
         </div>
+
       </div>
 
       <div class="absolute -bottom-6 -left-6 glass rounded-2xl p-4 animate-pulse">
-        <p class="text-sm text-gray-400">GitHub Activity</p>
-        <h3 class="text-2xl font-bold text-emerald-400">1,240+</h3>
-        <p class="text-xs text-gray-500">Contributions</p>
+
+        <p class="text-sm text-gray-400">
+          Data Experience
+        </p>
+
+        <h3 class="text-2xl font-bold text-emerald-400">
+          Reporting & Management
+        </h3>
+
+        <p class="text-xs text-gray-500">
+          Structured Data Workflow
+        </p>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- About -->
   <section id="about" class="relative z-10 max-w-6xl mx-auto px-6 py-24">
+
     <div class="glass rounded-3xl p-10">
-      <h3 class="text-4xl font-bold mb-8">About Me</h3>
+
+      <h3 class="text-4xl font-bold mb-8">
+        About Me
+      </h3>
 
       <p class="text-gray-300 text-lg leading-relaxed">
-        Saya adalah pengembang web yang fokus pada pembuatan sistem informasi,
-        dashboard data, dan website modern dengan desain elegan.
-        Berpengalaman dalam pengolahan data, sistem pelaporan,
-        serta UI interaktif yang responsif.
+        Saya memiliki ketertarikan dalam bidang
+        Data Administration dan Data Management,
+        dengan pengalaman dalam pengolahan data,
+        penyusunan laporan, pengelolaan database,
+        serta administrasi digital.
+
+        Terbiasa bekerja dengan data terstruktur,
+        spreadsheet, sistem pelaporan,
+        dan pengorganisasian informasi
+        untuk mendukung efisiensi operasional.
       </p>
+
     </div>
+
   </section>
 
   <!-- Skills -->
   <section id="skills" class="relative z-10 max-w-6xl mx-auto px-6 py-24">
 
     <div class="flex items-center justify-between mb-12 flex-wrap gap-4">
-      <h3 class="text-4xl font-bold">Skills</h3>
-      <p class="text-gray-400">Technology & Tools</p>
+
+      <h3 class="text-4xl font-bold">
+        Skills
+      </h3>
+
+      <p class="text-gray-400">
+        Data & Reporting
+      </p>
+
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
 
-      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">HTML</div>
-      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">CSS</div>
-      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">JavaScript</div>
-      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">PHP</div>
-      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">MySQL</div>
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Data Processing
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Spreadsheet
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Database Management
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Reporting
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Data Administration
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Microsoft Excel
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        CSV Processing
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        MySQL
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Documentation
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300">
+        Data Reporting
+      </div>
 
     </div>
+
   </section>
 
   <!-- Projects -->
   <section id="projects" class="relative z-10 max-w-7xl mx-auto px-6 py-24">
 
     <div class="flex items-center justify-between mb-12 flex-wrap gap-4">
-      <h3 class="text-4xl font-bold">Featured Projects</h3>
-      <p class="text-gray-400">Selected Works</p>
+
+      <h3 class="text-4xl font-bold">
+        Featured Projects
+      </h3>
+
+      <p class="text-gray-400">
+        Selected Works
+      </p>
+
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+      <!-- Project 1 -->
       <div class="glass rounded-3xl overflow-hidden card-hover shadow-xl">
+
         <div class="h-52 bg-gradient-to-br from-emerald-400/20 to-cyan-400/10 flex items-center justify-center text-6xl font-black text-white/10">
           01
         </div>
 
         <div class="p-6">
+
           <h4 class="text-2xl font-bold mb-3 text-emerald-400">
-            Medical Reporting System
+            Disease Reporting Management
           </h4>
 
           <p class="text-gray-400 leading-relaxed mb-6">
-            Sistem informasi pelaporan 10 besar penyakit berbasis web dengan dashboard interaktif.
+            Pengelolaan dan pelaporan data 10 besar penyakit
+            dengan rekap otomatis berdasarkan periode tertentu.
           </p>
 
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-xs glass">PHP</span>
-            <span class="px-3 py-1 rounded-full text-xs glass">MySQL</span>
-            <span class="px-3 py-1 rounded-full text-xs glass">Bootstrap</span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Reporting
+            </span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Database
+            </span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Data Management
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
+      <!-- Project 2 -->
       <div class="glass rounded-3xl overflow-hidden card-hover shadow-xl">
+
         <div class="h-52 bg-gradient-to-br from-cyan-400/20 to-emerald-400/10 flex items-center justify-center text-6xl font-black text-white/10">
           02
         </div>
 
         <div class="p-6">
+
           <h4 class="text-2xl font-bold mb-3 text-cyan-400">
-            Specimen Tube Tracking
+            Laboratory Data Tracking
           </h4>
 
           <p class="text-gray-400 leading-relaxed mb-6">
-            Sistem tracking specimen laboratorium dengan monitoring data real-time.
+            Pengelolaan data specimen laboratorium
+            dengan monitoring dan pencatatan data terstruktur.
           </p>
 
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-xs glass">JavaScript</span>
-            <span class="px-3 py-1 rounded-full text-xs glass">Spreadsheet</span>
-            <span class="px-3 py-1 rounded-full text-xs glass">API</span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Spreadsheet
+            </span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Documentation
+            </span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Monitoring
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
+      <!-- Project 3 -->
       <div class="glass rounded-3xl overflow-hidden card-hover shadow-xl">
+
         <div class="h-52 bg-gradient-to-br from-emerald-400/20 to-cyan-400/10 flex items-center justify-center text-6xl font-black text-white/10">
           03
         </div>
 
         <div class="p-6">
+
           <h4 class="text-2xl font-bold mb-3 text-emerald-400">
-            Data Analytics Dashboard
+            Operational Data Reporting
           </h4>
 
           <p class="text-gray-400 leading-relaxed mb-6">
-            Dashboard analisis data dengan visualisasi modern dan performa optimal.
+            Sistem pelaporan operasional dengan visualisasi data
+            untuk membantu monitoring dan pengambilan informasi.
           </p>
 
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-xs glass">React</span>
-            <span class="px-3 py-1 rounded-full text-xs glass">Chart.js</span>
-            <span class="px-3 py-1 rounded-full text-xs glass">Tailwind</span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Dashboard
+            </span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Reporting
+            </span>
+
+            <span class="px-3 py-1 rounded-full text-xs glass">
+              Data Visualization
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- Contact -->
   <section id="contact" class="relative z-10 max-w-5xl mx-auto px-6 py-24">
+
     <div class="glass rounded-3xl p-10 text-center">
 
       <h3 class="text-5xl font-black mb-6">
-        Let's Build Something Amazing
+        Let's Work With Data Efficiently
       </h3>
 
       <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-        Tertarik bekerja sama atau membuat project website modern?
-        Hubungi saya melalui GitHub atau media sosial.
+        Terbuka untuk peluang kerja dan kolaborasi
+        dalam bidang Data Administration,
+        Data Management, dan Reporting.
       </p>
 
       <div class="flex flex-wrap justify-center gap-4">
+
         <a href="https://github.com" target="_blank"
-          class="px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 transition text-black font-semibold">
+        class="px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 transition text-black font-semibold">
           GitHub
         </a>
 
         <a href="#"
-          class="px-8 py-4 rounded-2xl glass hover:bg-white/10 transition">
+        class="px-8 py-4 rounded-2xl glass hover:bg-white/10 transition">
           Instagram
         </a>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-white/10 py-8 text-center text-gray-500 text-sm relative z-10">
-    © 2026 Faisal Al Aziz — Elegant Interactive Portfolio.
+
+    © 2026 Faisal Al Aziz —
+    Data Administration & Data Management Portfolio.
+
   </footer>
 
   <script>
+
     const cursor = document.querySelector('.cursor');
     const dot = document.querySelector('.cursor-dot');
 
     document.addEventListener('mousemove', (e) => {
+
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
 
       dot.style.left = e.clientX + 'px';
       dot.style.top = e.clientY + 'px';
+
     });
 
     const cards = document.querySelectorAll('.card-hover');
 
     cards.forEach(card => {
+
       card.addEventListener('mousemove', (e) => {
+
         const rect = card.getBoundingClientRect();
+
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        card.style.transform = `perspective(1000px) rotateX(${-(y - rect.height / 2) / 18}deg) rotateY(${(x - rect.width / 2) / 18}deg) scale(1.03)`;
+        card.style.transform =
+        `perspective(1000px)
+        rotateX(${-(y - rect.height / 2) / 18}deg)
+        rotateY(${(x - rect.width / 2) / 18}deg)
+        scale(1.03)`;
+
       });
 
       card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+
+        card.style.transform =
+        'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+
       });
+
     });
+
   </script>
 
 </body>
 </html>
+```
