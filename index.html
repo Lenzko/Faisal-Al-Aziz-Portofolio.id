@@ -69,7 +69,7 @@ header{
 }
 
 .logo-text{
-    font-size:28px;
+    font-size:26px;
     font-weight:700;
     color:#D89E1D;
 }
@@ -125,20 +125,20 @@ header{
     display:flex;
     align-items:center;
     justify-content:center;
-    padding-top:90px;
+    padding-top:85px;
 }
 
 .hero-container{
     max-width:1400px;
     width:100%;
-    padding:0 50px;
+    padding:0 60px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    gap:50px;
+    justify-content:space-between;
+    gap:60px;
 }
 
-/* LEFT */
+/* ================= LEFT ================= */
 
 .hero-left{
     flex:1;
@@ -157,24 +157,24 @@ header{
 
 .hero-left p{
     margin-top:30px;
-    font-size:24px;
+    font-size:22px;
     line-height:1.8;
     color:#5f6775;
-    max-width:700px;
+    max-width:650px;
 }
 
 .features{
     margin-top:35px;
     display:flex;
-    gap:35px;
+    gap:30px;
     flex-wrap:wrap;
 }
 
 .feature{
     display:flex;
     align-items:center;
-    gap:12px;
-    font-size:18px;
+    gap:10px;
+    font-size:17px;
     font-weight:500;
 }
 
@@ -187,124 +187,86 @@ header{
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:14px;
 }
 
 .action-buttons{
+    margin-top:45px;
     display:flex;
-    gap:20px;
-    margin-top:50px;
+    gap:15px;
     flex-wrap:wrap;
 }
 
 .main-btn{
-    padding:18px 40px;
+    padding:18px 35px;
     border:none;
     border-radius:50px;
     background:#EFB32E;
     color:white;
-    font-size:18px;
+    font-size:17px;
     font-weight:700;
     cursor:pointer;
-    box-shadow:0 10px 25px rgba(239,179,46,.3);
     transition:.3s;
+    box-shadow:0 10px 25px rgba(239,179,46,.3);
 }
 
 .main-btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
 .second-btn{
-    padding:18px 40px;
+    padding:18px 35px;
     border-radius:50px;
     border:2px solid #ddd;
     background:white;
     color:#222;
-    font-size:18px;
+    font-size:17px;
     font-weight:600;
     cursor:pointer;
 }
 
-/* RIGHT */
+/* ================= FOTO ================= */
 
 .hero-right{
     flex:1;
     display:flex;
     justify-content:center;
+    align-items:center;
 }
 
-.circle{
+.photo-wrapper{
+    position:relative;
+}
+
+.profile-photo{
     width:520px;
     height:520px;
+    object-fit:cover;
     border-radius:50%;
-    background:#F3ECD8;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
+    border:8px solid #EFB32E;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.15),
+        0 0 0 15px rgba(239,179,46,.15);
+    transition:.4s;
 }
 
-.dashboard{
-    width:280px;
-    height:220px;
-    background:white;
-    border-radius:25px;
-    border:4px solid #EFB32E;
-    padding:25px;
-    position:relative;
+.profile-photo:hover{
+    transform:scale(1.03);
 }
 
-.bar{
-    background:#EFB32E;
-    border-radius:20px;
-    margin-bottom:18px;
-}
-
-.bar1{
-    width:60%;
-    height:14px;
-}
-
-.bar2{
-    width:85%;
-    height:14px;
-}
-
-.bar3{
-    width:45%;
-    height:14px;
-}
-
-.bar4{
-    width:75%;
-    height:14px;
-}
-
-.floating{
-    width:85px;
-    height:85px;
-    border-radius:50%;
-    background:white;
-    border:4px solid #EFB32E;
+.badge{
     position:absolute;
-    right:-25px;
-    bottom:-25px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#EFB32E;
-    font-size:42px;
-    font-weight:700;
-}
-
-.floating-text{
-    position:absolute;
-    bottom:-28px;
+    bottom:40px;
+    right:-20px;
+    background:white;
+    padding:12px 20px;
+    border-radius:50px;
     font-size:14px;
-    color:#EFB32E;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    color:#D89E1D;
 }
 
-/* FOOTER NOTICE */
+/* ================= NOTICE ================= */
 
 .notice{
     position:fixed;
@@ -312,18 +274,18 @@ header{
     bottom:10px;
     background:#F2AF2F;
     color:white;
-    padding:12px 20px;
+    padding:12px 18px;
     border-radius:8px;
     font-size:14px;
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:1200px){
 
 .hero-container{
-    flex-direction:column;
+    flex-direction:column-reverse;
     text-align:center;
 }
 
@@ -344,13 +306,17 @@ header{
     justify-content:center;
 }
 
-.circle{
-    width:420px;
-    height:420px;
+.profile-photo{
+    width:380px;
+    height:380px;
 }
 }
 
 @media(max-width:768px){
+
+header{
+    height:75px;
+}
 
 .menu{
     display:none;
@@ -358,6 +324,23 @@ header{
 
 .nav-buttons{
     display:none;
+}
+
+.navbar{
+    padding:0 20px;
+}
+
+.logo-text{
+    font-size:20px;
+}
+
+.hero{
+    padding-top:90px;
+}
+
+.hero-container{
+    flex-direction:column-reverse;
+    padding:20px;
 }
 
 .hero-left h1{
@@ -368,19 +351,25 @@ header{
     font-size:18px;
 }
 
-.circle{
-    width:320px;
-    height:320px;
+.profile-photo{
+    width:260px;
+    height:260px;
 }
 
-.dashboard{
-    width:220px;
-    height:180px;
+.badge{
+    right:-10px;
+    bottom:15px;
+    font-size:12px;
+}
+
+.action-buttons{
+    justify-content:center;
 }
 }
 
 </style>
 </head>
+
 <body>
 
 <header>
@@ -419,7 +408,6 @@ header{
 Data Administration
 <br>
 <span class="highlight">& Data Management</span>
-<br>
 </h1>
 
 <p>
@@ -449,21 +437,13 @@ Data Analysis & Reporting
 
 <div class="action-buttons">
 
-<button class="main-btn">
-Tentang Saya
-</button>
+<button class="main-btn">Tentang Saya</button>
 
-<button class="second-btn">
-Keahlian
-</button>
+<button class="second-btn">Keahlian</button>
 
-<button class="second-btn">
-Proyek
-</button>
+<button class="second-btn">Proyek</button>
 
-<button class="second-btn">
-Kontak
-</button>
+<button class="second-btn">Kontak</button>
 
 </div>
 
@@ -471,22 +451,14 @@ Kontak
 
 <div class="hero-right">
 
-<div class="circle">
+<div class="photo-wrapper">
 
-<div class="dashboard">
+<img src="foto-faisal.jpg"
+alt="Faisal Al Aziz"
+class="profile-photo">
 
-<div class="bar bar1"></div>
-<div class="bar bar2"></div>
-<div class="bar bar3"></div>
-<div class="bar bar4"></div>
-
-<div class="floating">
-+
-<div class="floating-text">
-Portfolio
-</div>
-</div>
-
+<div class="badge">
+Available For Work
 </div>
 
 </div>
