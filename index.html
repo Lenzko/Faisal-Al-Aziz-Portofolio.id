@@ -100,15 +100,15 @@ header{
 }
 
 .menu-btn span{
-    width:28px;
+    width:30px;
     height:3px;
-    background:#222;
+    background:#D89E1D;
     border-radius:10px;
     transition:.3s;
 }
 
 .menu-btn:hover span{
-    background:#D89E1D;
+    background:#b8820f;
 }
 
 .menu-btn:hover{
@@ -118,12 +118,21 @@ header{
 .dropdown-content{
     position:absolute;
     right:0;
-    top:60px;
-    min-width:240px;
+    top:65px;
+
+    min-width:250px;
+
     background:white;
-    border-radius:16px;
+
+    border:1px solid rgba(216,158,29,.15);
+
+    border-radius:18px;
+
     overflow:hidden;
-    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+    box-shadow:
+        0 20px 40px rgba(216,158,29,.12);
+
     display:none;
 }
 
@@ -134,7 +143,7 @@ header{
 
 .dropdown-content a{
     display:block;
-    padding:15px 20px;
+    padding:16px 22px;
     text-decoration:none;
     color:#444;
     font-weight:500;
@@ -142,8 +151,9 @@ header{
 }
 
 .dropdown-content a:hover{
-    background:#F8F5ED;
+    background:#fff8e8;
     color:#D89E1D;
+    padding-left:28px;
 }
 
 @keyframes fadeDown{
@@ -404,7 +414,17 @@ header{
 .action-buttons{
     justify-content:center;
 }
+.menu-btn.active span:nth-child(1){
+    transform:translateY(9px) rotate(45deg);
+}
 
+.menu-btn.active span:nth-child(2){
+    opacity:0;
+}
+
+.menu-btn.active span:nth-child(3){
+    transform:translateY(-9px) rotate(-45deg);
+}
 .notice{
     font-size:12px;
     padding:10px 14px;
@@ -524,28 +544,28 @@ Available For Work
 
 <script>
 
-function toggleMenu(){
+<script>
 
-    document
-        .getElementById("dropdownMenu")
-        .classList.toggle("show");
+const menuBtn = document.querySelector(".menu-btn");
+const dropdown = document.getElementById("dropdownMenu");
 
-}
+menuBtn.addEventListener("click", function(e){
 
-window.onclick = function(event){
+    e.stopPropagation();
 
-    if(!event.target.matches('.menu-btn')){
+    menuBtn.classList.toggle("active");
+    dropdown.classList.toggle("show");
 
-        const dropdown =
-        document.getElementById("dropdownMenu");
+});
 
-        if(dropdown.classList.contains("show")){
-            dropdown.classList.remove("show");
-        }
+document.addEventListener("click", function(){
 
-    }
+    dropdown.classList.remove("show");
+    menuBtn.classList.remove("active");
 
-}
+});
+
+</script>
 
 </script>
 
