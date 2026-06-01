@@ -88,13 +88,27 @@ header{
 .menu-btn{
     width:50px;
     height:50px;
+    background:transparent;
     border:none;
-    border-radius:50%;
-    background:white;
-    color:#D89E1D;
-    font-size:34px;
     cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+}
+
+.menu-btn span{
+    width:28px;
+    height:3px;
+    background:#222;
+    border-radius:10px;
     transition:.3s;
+}
+
+.menu-btn:hover span{
+    background:#D89E1D;
 }
 
 .menu-btn:hover{
@@ -414,7 +428,9 @@ header{
 <div class="menu-dropdown">
 
 <button class="menu-btn" onclick="toggleMenu()">
-⋮
+    <span></span>
+    <span></span>
+    <span></span>
 </button>
 
 <div class="dropdown-content" id="dropdownMenu">
