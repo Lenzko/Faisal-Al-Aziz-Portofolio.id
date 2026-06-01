@@ -16,7 +16,101 @@
     box-sizing:border-box;
     font-family:'Inter',sans-serif;
 }
+/* ================= PROJECT PREVIEW ================= */
 
+.projects-preview{
+    padding:100px 0;
+    overflow:hidden;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:48px;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#777;
+    font-size:18px;
+}
+
+.carousel{
+    position:relative;
+    height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.slide{
+    position:absolute;
+    width:700px;
+    transition:all .8s ease;
+    opacity:.35;
+    transform:scale(.8);
+    filter:blur(1px);
+}
+
+.slide img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.slide-caption{
+    text-align:center;
+    margin-top:18px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.slide.active{
+    opacity:1;
+    transform:translateX(0) scale(1);
+    z-index:5;
+    filter:none;
+}
+
+.slide.prev{
+    transform:translateX(-380px) scale(.82);
+    opacity:.45;
+    z-index:2;
+}
+
+.slide.next{
+    transform:translateX(380px) scale(.82);
+    opacity:.45;
+    z-index:2;
+}
+
+@media(max-width:768px){
+
+.slide{
+    width:90%;
+}
+
+.slide.prev{
+    transform:translateX(-120px) scale(.8);
+}
+
+.slide.next{
+    transform:translateX(120px) scale(.8);
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+.carousel{
+    height:340px;
+}
+
+}
 html{
     scroll-behavior:smooth;
 }
@@ -551,7 +645,39 @@ Available For Work
 </div>
 
 </section>
+<section class="projects-preview">
 
+    <div class="section-title">
+        <h2>Preview Proyek Saya</h2>
+        <p>Beberapa proyek yang pernah saya kerjakan</p>
+    </div>
+
+    <div class="carousel">
+
+        <div class="slide active">
+            <img src="project1.jpg" alt="Project 1">
+            <div class="slide-caption">
+                Sistem Informasi Pelaporan Penyakit
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="project2.jpg" alt="Project 2">
+            <div class="slide-caption">
+                Dashboard Data Kesehatan
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="project3.jpg" alt="Project 3">
+            <div class="slide-caption">
+                Website Portfolio Personal
+            </div>
+        </div>
+
+    </div>
+
+</section>
 <div class="notice">
 ⚠ Tampilan terbaik disarankan menggunakan mode desktop.
 </div>
@@ -576,6 +702,46 @@ document.addEventListener("click", function(){
     menuBtn.classList.remove("active");
 
 });
+
+</script>
+<script>
+
+const slides = document.querySelectorAll('.slide');
+
+let current = 0;
+
+function updateSlider(){
+
+    slides.forEach(slide=>{
+        slide.classList.remove('active','prev','next');
+    });
+
+    let prev =
+        (current - 1 + slides.length)
+        % slides.length;
+
+    let next =
+        (current + 1)
+        % slides.length;
+
+    slides[current].classList.add('active');
+    slides[prev].classList.add('prev');
+    slides[next].classList.add('next');
+}
+
+updateSlider();
+
+setInterval(()=>{
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    updateSlider();
+
+},3000);
 
 </script>
 <br></br>
