@@ -3,44 +3,434 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me</title>
 
-<link rel="stylesheet" href="css/style.css">
+<title>Tentang Saya | Faisal Al Aziz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F8F5ED;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:85px;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1400px;
+    height:100%;
+    margin:auto;
+    padding:0 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-circle{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #f9e38c,
+        #d79b16,
+        #fff4c0
+    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+    font-weight:800;
+}
+
+.logo-text{
+    font-size:24px;
+    font-weight:700;
+    color:#D89E1D;
+}
+
+/* HERO */
+
+.hero{
+    padding-top:150px;
+    padding-bottom:80px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 30px;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:58px;
+    color:#111;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#D89E1D;
+}
+
+.hero-content p{
+    max-width:850px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.9;
+    color:#666;
+}
+
+/* SECTION */
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#111;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:10px;
+}
+
+/* PROFILE */
+
+.profile-card{
+    background:white;
+    border-radius:30px;
+    padding:50px;
+    box-shadow:0 10px 40px rgba(0,0,0,.05);
+}
+
+.profile-card p{
+    line-height:2;
+    color:#555;
+    font-size:18px;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#D89E1D;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:white;
+    padding:15px 25px;
+    border-radius:50px;
+    font-weight:600;
+    border:2px solid rgba(216,158,29,.15);
+    transition:.3s;
+}
+
+.skill:hover{
+    background:#D89E1D;
+    color:white;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    background:white;
+    border-radius:30px;
+    padding:70px 30px;
+    box-shadow:0 10px 40px rgba(0,0,0,.05);
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 35px;
+    background:#D89E1D;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.profile-card{
+    padding:30px;
+}
+
+.section-title h2{
+    font-size:32px;
+}
+
+.cta h2{
+    font-size:30px;
+}
+
+}
+
+</style>
 </head>
 <body>
 
 <header>
-<div class="container">
+<div class="navbar">
 
-<h2>Faisal.data</h2>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="skills.html">Skills</a>
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
-</nav>
+<div class="logo">
+<div class="logo-circle">F</div>
+<div class="logo-text">Faisal Al Aziz</div>
+</div>
 
 </div>
 </header>
 
-<section class="page">
-
+<section class="hero">
 <div class="container">
 
-<h1>About Me</h1>
+<div class="hero-content">
+
+<h1>Tentang <span>Saya</span></h1>
 
 <p>
-Saya memiliki ketertarikan dalam bidang Data Administration,
-Data Management, Reporting, dan pengelolaan database.
-Berpengalaman dalam pengolahan data, penyusunan laporan,
-serta dokumentasi informasi secara terstruktur.
+Saya adalah lulusan Sistem Informasi yang memiliki minat dalam
+administrasi data, pengelolaan informasi, pelaporan, analisis data,
+serta pengembangan sistem berbasis web. Saya terbiasa bekerja
+secara terstruktur, teliti, dan berorientasi pada kualitas hasil kerja.
 </p>
 
 </div>
 
+</div>
 </section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>Profil Profesional</h2>
+</div>
+
+<div class="profile-card">
+
+<p>
+Saya memiliki pengalaman dalam pengelolaan data, penyusunan laporan,
+administrasi digital, serta pengembangan aplikasi berbasis web menggunakan
+PHP dan MySQL. Selain itu saya juga memiliki kemampuan dalam
+mengolah data menggunakan Microsoft Excel dan membuat visualisasi
+informasi untuk mendukung pengambilan keputusan.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>Pendidikan & Pengalaman</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Pendidikan</h3>
+<p>
+S1 Sistem Informasi<br>
+Memiliki fokus pada pengelolaan data,
+analisis sistem, basis data, dan
+pengembangan aplikasi berbasis web.
+</p>
+</div>
+
+<div class="card">
+<h3>Pengalaman Magang</h3>
+<p>
+Berpengalaman dalam administrasi,
+pengelolaan data kesehatan,
+penyusunan laporan, serta mendukung
+operasional dan dokumentasi digital.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>Keahlian</h2>
+</div>
+
+<div class="skills">
+
+<div class="skill">Microsoft Excel</div>
+<div class="skill">Data Entry</div>
+<div class="skill">Data Management</div>
+<div class="skill">Reporting</div>
+<div class="skill">PHP</div>
+<div class="skill">MySQL</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Bootstrap</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>Sertifikasi</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Web Development</h3>
+<p>
+Pelatihan dan sertifikasi terkait
+pengembangan website serta
+implementasi sistem informasi.
+</p>
+</div>
+
+<div class="card">
+<h3>Data & Digital Administration</h3>
+<p>
+Pelatihan pengelolaan data,
+administrasi digital dan pelaporan.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="cta">
+
+<h2>Mari Berkolaborasi</h2>
+
+<p>
+Terbuka untuk peluang kerja,
+proyek freelance, maupun kolaborasi profesional.
+</p>
+
+<a href="#" class="btn">Hubungi Saya</a>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Faisal Al Aziz. All Rights Reserved.
+</footer>
 
 </body>
 </html>
