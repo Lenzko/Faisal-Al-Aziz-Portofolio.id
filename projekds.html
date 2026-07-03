@@ -5,7 +5,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}body{background:#F8F5ED;color:#333}
 header{position:fixed;top:0;width:100%;height:85px;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.06);z-index:9}
-.nav{max-width:1300px;height:100%;margin:auto;padding:0 30px;display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;gap:12px;align-items:center}.c{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f9e38c,#d79b16,#fff4c0);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.t{font-size:26px;color:#D89E1D;font-weight:700}
 .page{max-width:1300px;margin:auto;padding:120px 25px 60px}
 /* ================= NAVBAR ================= */
@@ -59,15 +58,16 @@ transform:translateY(-9px) rotate(-45deg);
 }
 
 .dropdown-content{
-position:absolute;
-right:0;
-top:65px;
-min-width:250px;
-background:#fff;
-border-radius:18px;
-overflow:hidden;
-display:none;
-box-shadow:0 20px 40px rgba(216,158,29,.12);
+    position:absolute;
+    right:0;
+    top:65px;
+    min-width:250px;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    display:none;
+    box-shadow:0 20px 40px rgba(216,158,29,.12);
+    z-index:9999;
 }
 
 .dropdown-content.show{
@@ -364,7 +364,4 @@ l.onclick=function(){
 l.style.display="none";
 
 };
-const l=document.getElementById('l'),li=document.getElementById('li');
-document.querySelectorAll('img').forEach(i=>i.onclick=()=>{li.src=i.src;l.style.display='flex';});
-l.onclick=()=>l.style.display='none';
 </script></body></html>
