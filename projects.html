@@ -49,10 +49,50 @@
 @media(max-width:768px){
 
 .floating-home{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#EFB32E;
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    box-shadow:0 10px 25px rgba(239,179,46,.35);
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.floating-home:hover{
+    transform:translateY(-5px) scale(1.05);
+    background:#D89E1D;
+}
+
+@media(max-width:768px){
+
+.floating-home{
     width:55px;
     height:55px;
     right:20px;
     bottom:20px;
+}
+
+.floating-home svg{
+    width:22px;
+    height:22px;
+}
+
 }
 
 .floating-home svg{
@@ -245,7 +285,80 @@ header{
     font-weight:700;
     color:#D89E1D;
 }
+/* ================= BURGER ================= */
 
+.menu-dropdown{
+    position:relative;
+}
+
+.menu-btn{
+    width:50px;
+    height:50px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+}
+
+.menu-btn span{
+    width:30px;
+    height:3px;
+    background:#D89E1D;
+    border-radius:10px;
+    transition:.35s;
+}
+
+.menu-btn.active span:nth-child(1){
+    transform:translateY(9px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2){
+    opacity:0;
+}
+
+.menu-btn.active span:nth-child(3){
+    transform:translateY(-9px) rotate(-45deg);
+}
+
+.dropdown-content{
+    position:absolute;
+    right:0;
+    top:65px;
+
+    min-width:250px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    display:none;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 40px rgba(216,158,29,.12);
+}
+
+.dropdown-content.show{
+    display:block;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:16px 22px;
+    text-decoration:none;
+    color:#444;
+    transition:.3s;
+}
+
+.dropdown-content a:hover{
+    background:#FFF8E8;
+    color:#D89E1D;
+}
 /* ================= BURGER ================= */
 
 .menu-dropdown{
@@ -574,7 +687,24 @@ setInterval(()=>{
 
 </script>
 <script>
+const menuBtn = document.querySelector(".menu-btn");
+const dropdown = document.getElementById("dropdownMenu");
 
+menuBtn.addEventListener("click",function(e){
+
+    e.stopPropagation();
+
+    menuBtn.classList.toggle("active");
+    dropdown.classList.toggle("show");
+
+});
+
+document.addEventListener("click",function(){
+
+    menuBtn.classList.remove("active");
+    dropdown.classList.remove("show");
+
+});
 const menuBtn = document.querySelector(".menu-btn");
 const dropdown = document.getElementById("dropdownMenu");
 
@@ -608,5 +738,6 @@ viewBox="0 0 16 16">
 </svg>
 
 </a>
+
 </body>
 </html>
