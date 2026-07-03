@@ -8,6 +8,125 @@ header{position:fixed;top:0;width:100%;height:85px;background:#fff;box-shadow:0 
 .nav{max-width:1300px;height:100%;margin:auto;padding:0 30px;display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;gap:12px;align-items:center}.c{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f9e38c,#d79b16,#fff4c0);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.t{font-size:26px;color:#D89E1D;font-weight:700}
 .page{max-width:1300px;margin:auto;padding:120px 25px 60px}
+/* ================= NAVBAR ================= */
+
+.navbar{
+max-width:1300px;
+height:100%;
+margin:auto;
+padding:0 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu-dropdown{
+position:relative;
+}
+
+.menu-btn{
+width:50px;
+height:50px;
+border:none;
+background:transparent;
+cursor:pointer;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:6px;
+}
+
+.menu-btn span{
+width:30px;
+height:3px;
+background:#D89E1D;
+border-radius:10px;
+transition:.35s;
+}
+
+.menu-btn.active span:nth-child(1){
+transform:translateY(9px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-btn.active span:nth-child(3){
+transform:translateY(-9px) rotate(-45deg);
+}
+
+.dropdown-content{
+position:absolute;
+right:0;
+top:65px;
+min-width:250px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+display:none;
+box-shadow:0 20px 40px rgba(216,158,29,.12);
+}
+
+.dropdown-content.show{
+display:block;
+}
+
+.dropdown-content a{
+display:block;
+padding:16px 22px;
+text-decoration:none;
+color:#444;
+transition:.3s;
+}
+
+.dropdown-content a:hover{
+background:#FFF8E8;
+color:#D89E1D;
+}
+
+/* ================= FLOATING HOME ================= */
+
+.floating-home{
+position:fixed;
+right:30px;
+bottom:30px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#EFB32E;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(239,179,46,.35);
+transition:.3s;
+z-index:999;
+}
+
+.floating-home:hover{
+transform:translateY(-5px) scale(1.05);
+background:#D89E1D;
+}
+
+@media(max-width:768px){
+
+.floating-home{
+width:55px;
+height:55px;
+right:20px;
+bottom:20px;
+}
+
+.floating-home svg{
+width:22px;
+height:22px;
+}
+
+}
 .hero{background:#fff;border-radius:24px;padding:45px;display:grid;grid-template-columns:420px 1fr;gap:40px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
 .project-preview{
 
@@ -91,11 +210,49 @@ h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 
 .tech span{display:inline-block;background:#FFF4D6;padding:10px 15px;border-radius:50px;margin:6px;font-weight:700}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery img{width:100%;height:180px;object-fit:cover;border-radius:14px;cursor:pointer;transition:.3s}.gallery img:hover{transform:scale(1.03)}
 .light{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center}.light img{max-width:95%;max-height:95%}
-.home{position:fixed;right:25px;bottom:25px;width:65px;height:65px;background:#EFB32E;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;text-decoration:none;font-size:30px}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.phone img{height:600px}h1{font-size:38px}}
 </style></head><body>
-<header><div class='nav'><div class='logo'><div class='c'>F</div><div class='t'>Faisal Al Aziz</div></div></div></header>
-<div class='page'>
+<header>
+
+<div class="navbar">
+
+    <div class="logo">
+
+        <div class="c">F</div>
+
+        <div class="t">Faisal Al Aziz</div>
+
+    </div>
+
+    <div class="menu-dropdown">
+
+        <button class="menu-btn">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <div class="dropdown-content" id="dropdownMenu">
+
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Saya</a>
+            <a href="pengalaman.html">Pengalaman</a>
+            <a href="project.html">Proyek</a>
+            <a href="sertifikat.html">Sertifikat</a>
+            <a href="pencapaian.html">Pencapaian</a>
+            <a href="organisasi.html">Organisasi</a>
+            <a href="cv.html">Curriculum Vitae</a>
+            <a href="kontak.html">Kontak</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</header><div class='page'>
 <div class='hero'>
 
     <div class="project-preview">
@@ -150,8 +307,63 @@ h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 
 <div class='sec'><h2>Galeri</h2><br><div class='gallery'><img src='p.avif'><img src='p2.avif'><img src='p.avif'><img src='p2.avif'></div></div>
 </div>
 <div class='light' id='l'><img id='li'></div>
-<a class='home' href='index.html'>⌂</a>
-<script>
+<a href="index.html" class="floating-home">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="26"
+height="26"
+fill="currentColor"
+viewBox="0 0 16 16">
+
+<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 2 8h1v5a1 1 0 0 0 1 1h3V10h2v4h3a1 1 0 0 0 1-1V8h1a.5.5 0 0 0 .354-.854z"/>
+
+</svg>
+
+</a>
+
+    <script>
+const menuBtn=document.querySelector(".menu-btn");
+const dropdown=document.getElementById("dropdownMenu");
+
+if(menuBtn){
+
+menuBtn.addEventListener("click",function(e){
+
+e.stopPropagation();
+
+menuBtn.classList.toggle("active");
+dropdown.classList.toggle("show");
+
+});
+
+document.addEventListener("click",function(){
+
+menuBtn.classList.remove("active");
+dropdown.classList.remove("show");
+
+});
+
+}
+
+const l=document.getElementById("l");
+const li=document.getElementById("li");
+
+document.querySelectorAll(".project-preview img,.gallery img").forEach(img=>{
+
+img.onclick=function(){
+
+li.src=this.src;
+l.style.display="flex";
+
+};
+
+});
+
+l.onclick=function(){
+
+l.style.display="none";
+
+};
 const l=document.getElementById('l'),li=document.getElementById('li');
 document.querySelectorAll('img').forEach(i=>i.onclick=()=>{li.src=i.src;l.style.display='flex';});
 l.onclick=()=>l.style.display='none';
