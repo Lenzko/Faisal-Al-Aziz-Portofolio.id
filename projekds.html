@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Project Detail Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}body{background:#F8F5ED;color:#333}
+header{position:fixed;top:0;width:100%;height:85px;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.06);z-index:9}
+.nav{max-width:1300px;height:100%;margin:auto;padding:0 30px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;gap:12px;align-items:center}.c{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f9e38c,#d79b16,#fff4c0);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.t{font-size:26px;color:#D89E1D;font-weight:700}
+.page{max-width:1300px;margin:auto;padding:120px 25px 60px}
+.hero{background:#fff;border-radius:24px;padding:45px;display:grid;grid-template-columns:420px 1fr;gap:40px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.phone{background:#111;padding:12px;border-radius:30px}.phone img{width:100%;height:800px;object-fit:cover;border-radius:18px;cursor:pointer}
+h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 0;background:#FFF4D6;padding:10px 18px;border-radius:999px;color:#B57C00;font-weight:700}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:20px 0}.box{background:#fff;padding:20px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.sec{margin-top:30px;background:#fff;padding:35px;border-radius:22px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.tech span{display:inline-block;background:#FFF4D6;padding:10px 15px;border-radius:50px;margin:6px;font-weight:700}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery img{width:100%;height:180px;object-fit:cover;border-radius:14px;cursor:pointer;transition:.3s}.gallery img:hover{transform:scale(1.03)}
+.light{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center}.light img{max-width:95%;max-height:95%}
+.home{position:fixed;right:25px;bottom:25px;width:65px;height:65px;background:#EFB32E;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;text-decoration:none;font-size:30px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.phone img{height:600px}h1{font-size:38px}}
+</style></head><body>
+<header><div class='nav'><div class='logo'><div class='c'>F</div><div class='t'>Faisal Al Aziz</div></div></div></header>
+<div class='page'>
+<div class='hero'>
+<div class='phone'><img id='main' src='project-long.jpg' alt='Project'></div>
+<div><h1>Detail <span>Project</span></h1><div class='badge'>Medical Information System</div>
+<p>Sistem Informasi Manajemen Pelaporan 10 Besar Penyakit yang dikembangkan untuk Dinas Kesehatan. Sistem mampu melakukan import data, analisis, visualisasi dashboard, serta menghasilkan laporan otomatis.</p>
+<div class='info'>
+<div class='box'><b>Role</b><br>Full Stack Developer</div>
+<div class='box'><b>Durasi</b><br>6 Bulan</div>
+<div class='box'><b>Client</b><br>Dinas Kesehatan</div>
+<div class='box'><b>Platform</b><br>Web Responsive</div>
+</div>
+</div></div>
+<div class='sec'><h2>Tentang Project</h2><br><p>Screenshot utama menggunakan ukuran panjang (21 × 80 cm) sehingga ditampilkan dalam mockup perangkat agar tetap menarik. Ganti file <b>project-long.jpg</b> dengan screenshot panjang Anda.</p></div>
+<div class='sec'><h2>Teknologi</h2><div class='tech'><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>Google Apps Script</span></div></div>
+<div class='sec'><h2>Galeri</h2><br><div class='gallery'><img src='p.avif'><img src='p2.avif'><img src='p.avif'><img src='p2.avif'></div></div>
+</div>
+<div class='light' id='l'><img id='li'></div>
+<a class='home' href='index.html'>⌂</a>
+<script>
+const l=document.getElementById('l'),li=document.getElementById('li');
+document.querySelectorAll('img').forEach(i=>i.onclick=()=>{li.src=i.src;l.style.display='flex';});
+l.onclick=()=>l.style.display='none';
+</script></body></html>
