@@ -1,1200 +1,158 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Detail Project | Faisal Al Aziz</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Project Detail Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#F8F5ED;
-overflow-x:hidden;
-color:#333;
-}
-
-/* ================= HEADER ================= */
-
-header{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:85px;
-
-background:white;
-
-box-shadow:0 2px 15px rgba(0,0,0,.05);
-
-z-index:1000;
-
-}
-
-.navbar{
-
-max-width:1400px;
-
-height:100%;
-
-margin:auto;
-
-padding:0 40px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-}
-
-/* logo */
-
-.logo{
-
-display:flex;
-
-align-items:center;
-
-gap:15px;
-
-}
-
-.logo-circle{
-
-width:52px;
-
-height:52px;
-
-border-radius:50%;
-
-background:
-linear-gradient(
-135deg,
-#f9e38c,
-#d79b16,
-#fff4c0
-);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-color:white;
-
-font-size:28px;
-
-font-weight:800;
-
-}
-
-.logo-text{
-
-font-size:26px;
-
-font-weight:700;
-
-color:#D89E1D;
-
-}
-
-/* ================= MENU ================= */
-
-.menu-dropdown{
-
-position:relative;
-
-}
-
-.menu-btn{
-
-width:50px;
-height:50px;
-
-background:transparent;
-
-border:none;
-
-cursor:pointer;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-gap:6px;
-
-}
-
-.menu-btn span{
-
-width:30px;
-height:3px;
-
-background:#D89E1D;
-
-border-radius:20px;
-
-transition:.35s;
-
-}
-
-.menu-btn.active span:nth-child(1){
-
-transform:translateY(9px) rotate(45deg);
-
-}
-
-.menu-btn.active span:nth-child(2){
-
-opacity:0;
-
-}
-
-.menu-btn.active span:nth-child(3){
-
-transform:translateY(-9px) rotate(-45deg);
-
-}
-
-.dropdown-content{
-
-position:absolute;
-
-top:65px;
-right:0;
-
-min-width:250px;
-
-background:white;
-
-border-radius:18px;
-
-display:none;
-
-overflow:hidden;
-
-box-shadow:0 20px 40px rgba(216,158,29,.12);
-
-}
-
-.dropdown-content.show{
-
-display:block;
-
-}
-
-.dropdown-content a{
-
-display:block;
-
-padding:16px 22px;
-
-text-decoration:none;
-
-color:#444;
-
-transition:.3s;
-
-}
-
-.dropdown-content a:hover{
-
-background:#FFF8E8;
-
-color:#D89E1D;
-
-}
-
-/* ================= PAGE ================= */
-
-.page{
-
-max-width:1400px;
-
-margin:auto;
-
-padding-top:130px;
-
-padding-left:35px;
-
-padding-right:35px;
-
-padding-bottom:80px;
-
-}
-
-/* ================= HERO ================= */
-
-.hero{
-
-display:grid;
-
-grid-template-columns:
-520px
-1fr;
-
-gap:60px;
-
-align-items:start;
-
-margin-bottom:80px;
-
-}
-
-/* ================= PREVIEW ================= */
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}body{background:#F8F5ED;color:#333}
+header{position:fixed;top:0;width:100%;height:85px;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.06);z-index:9}
+.nav{max-width:1300px;height:100%;margin:auto;padding:0 30px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;gap:12px;align-items:center}.c{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f9e38c,#d79b16,#fff4c0);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.t{font-size:26px;color:#D89E1D;font-weight:700}
+.page{max-width:1300px;margin:auto;padding:120px 25px 60px}
+.hero{background:#fff;border-radius:24px;padding:45px;display:grid;grid-template-columns:420px 1fr;gap:40px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
 .project-preview{
 
-height:780px;
+    width:100%;
+    max-width:520px;
 
-background:white;
+    height:720px;
 
-border-radius:30px;
+    margin:auto;
 
-padding:15px;
+    overflow-y:auto;
 
-overflow-y:auto;
+    overflow-x:hidden;
 
-overflow-x:hidden;
+    background:white;
 
-box-shadow:
-0 20px 60px rgba(0,0,0,.08);
+    border-radius:25px;
 
-border:1px solid #eee;
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.12);
 
-scroll-behavior:smooth;
+    border:8px solid white;
 
-}
+    scroll-behavior:smooth;
 
-.project-preview img{
+}.project-preview img{
 
-width:100%;
+    width:100%;
 
-display:block;
+    height:auto;
 
-border-radius:18px;
+    display:block;
 
-}
+}.project-preview::-webkit-scrollbar{
 
-/* scrollbar */
-
-.project-preview::-webkit-scrollbar{
-
-width:8px;
+    width:8px;
 
 }
+.preview-note{
 
+text-align:center;
+
+margin-top:20px;
+
+font-size:15px;
+
+color:#777;
+
+}
 .project-preview::-webkit-scrollbar-track{
 
-background:#eee;
+    background:#eee;
 
-border-radius:30px;
+    border-radius:20px;
 
 }
 
 .project-preview::-webkit-scrollbar-thumb{
 
-background:#D89E1D;
+    background:#D89E1D;
 
-border-radius:30px;
+    border-radius:20px;
 
-}
+}.project-preview{
 
-/* ================= DETAIL ================= */
-
-.project-info{
-
-position:sticky;
-
-top:115px;
+transition:.4s;
 
 }
 
-/* hero card */
-
-.hero-card{
-
-background:white;
-
-padding:45px;
-
-border-radius:28px;
-
-box-shadow:
-0 20px 50px rgba(0,0,0,.08);
-
-}
-
-.badge{
-
-display:inline-block;
-
-padding:10px 18px;
-
-border-radius:50px;
-
-background:#FFF3D5;
-
-color:#B87C00;
-
-font-weight:700;
-
-margin-bottom:20px;
-
-}
-
-.hero-card h1{
-
-font-size:48px;
-
-line-height:1.2;
-
-margin-bottom:25px;
-
-}
-
-.hero-card h1 span{
-
-color:#D89E1D;
-
-}
-
-.hero-card p{
-
-font-size:18px;
-
-line-height:2;
-
-color:#666;
-
-text-align:justify;
-
-margin-bottom:35px;
-
-}
-
-/* ================= INFO GRID ================= */
-
-.info-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
-
-gap:18px;
-
-}
-
-.info-box{
-
-background:#fafafa;
-
-padding:20px;
-
-border-radius:18px;
-
-transition:.35s;
-
-border:1px solid #eee;
-
-}
-
-.info-box:hover{
-
-transform:translateY(-6px);
-
-box-shadow:
-0 15px 30px rgba(216,158,29,.15);
-
-}
-
-.info-box h3{
-
-font-size:16px;
-
-color:#D89E1D;
-
-margin-bottom:8px;
-
-}
-
-.info-box p{
-
-margin:0;
-
-font-size:15px;
-
-color:#555;
-
-line-height:1.7;
-
-}
-
-/* ================= FLOAT ================= */
-
-.floating-home{
-
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-width:65px;
-
-height:65px;
-
-background:#EFB32E;
-
-color:white;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-decoration:none;
-
-box-shadow:
-0 10px 25px rgba(239,179,46,.35);
-
-transition:.3s;
-
-z-index:999;
-
-}
-
-.floating-home:hover{
+.project-preview:hover{
 
 transform:translateY(-5px);
 
-background:#D89E1D;
+box-shadow:
+0 30px 70px rgba(216,158,29,.18);
 
 }
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:1100px){
-
-.hero{
-
-grid-template-columns:1fr;
-
-}
-
-.project-info{
-
-position:relative;
-
-top:0;
-
-}
-
-.project-preview{
-
-height:650px;
-
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="navbar">
-
-<div class="logo">
-
-<div class="logo-circle">F</div>
-
-<div class="logo-text">
-Faisal Al Aziz
-</div>
-
-</div>
-
-<div class="menu-dropdown">
-
-<button class="menu-btn">
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
-
-<div class="dropdown-content" id="dropdownMenu">
-
-<a href="index.html">Beranda</a>
-<a href="about.html">Tentang Saya</a>
-<a href="pengalaman.html">Pengalaman</a>
-<a href="project.html">Proyek</a>
-<a href="sertifikat.html">Sertifikat</a>
-<a href="pencapaian.html">Pencapaian</a>
-<a href="organisasi.html">Organisasi</a>
-<a href="cv.html">Curriculum Vitae</a>
-<a href="kontak.html">Kontak</a>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-<section class="page">
-
-<div class="hero">
-
-<!-- KIRI -->
-
-<div class="project-preview">
-
-<img src="XXX.avif">
-
-</div>
-
-<!-- KANAN -->
-
-<div class="project-info">
-
-<div class="hero-card">
-
-<div class="badge">
-
-Medical Information System
-
-</div>
-
-<h1>
-
-Detail
-<span>Project</span>
-
-</h1>
-
-<p>
-
-Sistem Informasi Manajemen Pelaporan
-10 Besar Penyakit berbasis Web
-yang dikembangkan untuk membantu
-pengolahan data kesehatan,
-visualisasi dashboard,
-serta pembuatan laporan otomatis.
-
-</p>
-
-<div class="info-grid">
-
-<div class="info-box">
-
-<h3>Role</h3>
-
-<p>Full Stack Developer</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Durasi</h3>
-
-<p>6 Bulan</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Client</h3>
-
-<p>Dinas Kesehatan Kota Semarang</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Platform</h3>
-
-<p>Website Responsive</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<!-- ================= TENTANG PROJECT ================= -->
-
-<div class="content-section">
-
-    <div class="section-title">
-        Tentang <span>Project</span>
+h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 0;background:#FFF4D6;padding:10px 18px;border-radius:999px;color:#B57C00;font-weight:700}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:20px 0}.box{background:#fff;padding:20px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.sec{margin-top:30px;background:#fff;padding:35px;border-radius:22px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.tech span{display:inline-block;background:#FFF4D6;padding:10px 15px;border-radius:50px;margin:6px;font-weight:700}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery img{width:100%;height:180px;object-fit:cover;border-radius:14px;cursor:pointer;transition:.3s}.gallery img:hover{transform:scale(1.03)}
+.light{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center}.light img{max-width:95%;max-height:95%}
+.home{position:fixed;right:25px;bottom:25px;width:65px;height:65px;background:#EFB32E;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;text-decoration:none;font-size:30px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.phone img{height:600px}h1{font-size:38px}}
+</style></head><body>
+<header><div class='nav'><div class='logo'><div class='c'>F</div><div class='t'>Faisal Al Aziz</div></div></div></header>
+<div class='page'>
+<div class='hero'>
+
+    <div class="project-preview">
+        <img
+            id="main"
+            src="XXX.avif"
+            alt="Project">
     </div>
 
-    <div class="section-card">
+    <div>
+
+        <h1>Detail <span>Project</span></h1>
+
+        <div class='badge'>Medical Information System</div>
 
         <p>
-
-        Sistem Informasi Manajemen Pelaporan 10 Besar Penyakit merupakan
-        aplikasi berbasis web yang dikembangkan untuk membantu proses
-        pengolahan data penyakit secara digital pada Dinas Kesehatan Kota
-        Semarang.
-
-        Sistem ini mampu melakukan import data, pengolahan otomatis,
-        visualisasi dashboard interaktif, penyimpanan laporan bulanan,
-        triwulan, semester, hingga tahunan, serta menghasilkan laporan
-        dalam format Excel dan PDF.
-
-        Seluruh proses dibuat agar lebih cepat, akurat, serta
-        meminimalkan kesalahan pengolahan data manual.
-
+            Sistem Informasi Manajemen Pelaporan 10 Besar Penyakit
+            yang dikembangkan untuk Dinas Kesehatan.
+            Sistem mampu melakukan import data, analisis,
+            visualisasi dashboard, serta menghasilkan laporan otomatis.
         </p>
 
-    </div>
+        <div class='info'>
 
-</div>
+            <div class='box'>
+                <b>Role</b><br>
+                Full Stack Developer
+            </div>
 
-<!-- ================= TEKNOLOGI ================= -->
+            <div class='box'>
+                <b>Durasi</b><br>
+                6 Bulan
+            </div>
 
-<div class="content-section">
+            <div class='box'>
+                <b>Client</b><br>
+                Dinas Kesehatan
+            </div>
 
-    <div class="section-title">
-        Teknologi <span>Yang Digunakan</span>
-    </div>
+            <div class='box'>
+                <b>Platform</b><br>
+                Web Responsive
+            </div>
 
-    <div class="technology">
-
-        <div class="tech-item">HTML5</div>
-
-        <div class="tech-item">CSS3</div>
-
-        <div class="tech-item">JavaScript</div>
-
-        <div class="tech-item">PHP Native</div>
-
-        <div class="tech-item">MySQL</div>
-
-        <div class="tech-item">Bootstrap</div>
-
-        <div class="tech-item">Chart.js</div>
-
-        <div class="tech-item">Google Apps Script</div>
+        </div>
 
     </div>
 
 </div>
-
-<!-- ================= GALERI ================= -->
-
-<div class="content-section">
-
-    <div class="section-title">
-
-        Galeri <span>Project</span>
-
-    </div>
-
-    <div class="gallery">
-
-        <img src="galeri1.jpg">
-
-        <img src="galeri2.jpg">
-
-        <img src="galeri3.jpg">
-
-        <img src="galeri4.jpg">
-
-        <img src="galeri5.jpg">
-
-        <img src="galeri6.jpg">
-
-    </div>
-
+<div class='sec'><h2>Tentang Project</h2><br><p>Screenshot utama menggunakan ukuran panjang (21 × 80 cm) sehingga ditampilkan dalam mockup perangkat agar tetap menarik. Ganti file <b>project-long.jpg</b> dengan screenshot panjang Anda.</p></div>
+<div class='sec'><h2>Teknologi</h2><div class='tech'><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>Google Apps Script</span></div></div>
+<div class='sec'><h2>Galeri</h2><br><div class='gallery'><img src='p.avif'><img src='p2.avif'><img src='p.avif'><img src='p2.avif'></div></div>
 </div>
-
-<a href="index.html" class="floating-home">
-
-<svg xmlns="http://www.w3.org/2000/svg"
-width="26"
-height="26"
-fill="currentColor"
-viewBox="0 0 16 16">
-
-<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 2 8h1v5a1 1 0 0 0 1 1h3V10h2v4h3a1 1 0 0 0 1-1V8h1a.5.5 0 0 0 .354-.854z"/>
-
-</svg>
-
-</a>
-<!-- ================= LIGHTBOX ================= -->
-
-<div class="lightbox" id="lightbox">
-
-    <span class="close-lightbox">&times;</span>
-
-    <img id="lightboxImg" src="">
-
-</div>
-
+<div class='light' id='l'><img id='li'></div>
+<a class='home' href='index.html'>⌂</a>
 <script>
-
-/*=============================
-    DROPDOWN MENU
-=============================*/
-
-const menuBtn =
-document.querySelector(".menu-btn");
-
-const dropdown =
-document.getElementById("dropdownMenu");
-
-menuBtn.addEventListener("click",function(e){
-
-e.stopPropagation();
-
-menuBtn.classList.toggle("active");
-
-dropdown.classList.toggle("show");
-
-});
-
-document.addEventListener("click",function(){
-
-menuBtn.classList.remove("active");
-
-dropdown.classList.remove("show");
-
-});
-
-
-/*=============================
-    LIGHTBOX GALLERY
-=============================*/
-
-const gallery =
-document.querySelectorAll(".gallery img");
-
-const lightbox =
-document.getElementById("lightbox");
-
-const lightboxImg =
-document.getElementById("lightboxImg");
-
-gallery.forEach(img=>{
-
-img.addEventListener("click",function(){
-
-lightbox.style.display="flex";
-
-lightboxImg.src=this.src;
-
-});
-
-});
-
-document.querySelector(".close-lightbox")
-
-.addEventListener("click",function(){
-
-lightbox.style.display="none";
-
-});
-
-lightbox.addEventListener("click",function(e){
-
-if(e.target===lightbox){
-
-lightbox.style.display="none";
-
-}
-
-});
-
-
-/*=============================
-    CARD ANIMATION
-=============================*/
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{
-threshold:.2
-});
-
-document.querySelectorAll(
-
-".section-card,.tech-item,.gallery img,.info-box"
-
-).forEach(el=>{
-
-observer.observe(el);
-
-});
-
-</script>
-<!-- ================= STATISTIK ================= -->
-
-<div class="content-section">
-
-    <div class="section-title">
-        Statistik <span>Project</span>
-    </div>
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-
-            <h2 class="counter" data-target="6">0</h2>
-
-            <p>Bulan Pengerjaan</p>
-
-        </div>
-
-        <div class="stat-card">
-
-            <h2 class="counter" data-target="18">0</h2>
-
-            <p>Fitur Utama</p>
-
-        </div>
-
-        <div class="stat-card">
-
-            <h2 class="counter" data-target="8">0</h2>
-
-            <p>Teknologi</p>
-
-        </div>
-
-        <div class="stat-card">
-
-            <h2 class="counter" data-target="100">0</h2>
-
-            <p>% Responsive</p>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- ================= TIMELINE ================= -->
-
-<div class="content-section">
-
-    <div class="section-title">
-        Timeline <span>Pengembangan</span>
-    </div>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <div class="timeline-circle"></div>
-
-            <h3>Analisis</h3>
-
-            <p>Analisis kebutuhan sistem bersama instansi.</p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-circle"></div>
-
-            <h3>Desain</h3>
-
-            <p>Merancang database, UI dan alur sistem.</p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-circle"></div>
-
-            <h3>Development</h3>
-
-            <p>Membangun seluruh modul aplikasi.</p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-circle"></div>
-
-            <h3>Testing</h3>
-
-            <p>Pengujian serta perbaikan bug.</p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-circle"></div>
-
-            <h3>Implementasi</h3>
-
-            <p>Digunakan pada lingkungan kerja.</p>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- ================= FITUR ================= -->
-
-<div class="content-section">
-
-    <div class="section-title">
-        Fitur <span>Utama</span>
-    </div>
-
-    <div class="feature-grid">
-
-        <div class="feature-card">
-            📊
-            <h3>Dashboard</h3>
-            <p>Visualisasi data interaktif.</p>
-        </div>
-
-        <div class="feature-card">
-            📂
-            <h3>Import CSV</h3>
-            <p>Upload data otomatis.</p>
-        </div>
-
-        <div class="feature-card">
-            📈
-            <h3>Grafik</h3>
-            <p>Chart interaktif.</p>
-        </div>
-
-        <div class="feature-card">
-            📄
-            <h3>Export</h3>
-            <p>Excel & PDF.</p>
-        </div>
-
-        <div class="feature-card">
-            🔐
-            <h3>Login</h3>
-            <p>Keamanan multi user.</p>
-        </div>
-
-        <div class="feature-card">
-            ⚙️
-            <h3>Otomatisasi</h3>
-            <p>Perhitungan otomatis.</p>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- ================= CTA ================= -->
-
-<div class="cta">
-
-    <h2>Tertarik Melihat Project Ini?</h2>
-
-    <p>
-        Anda dapat melihat demo atau source code project melalui tombol berikut.
-    </p>
-
-    <div class="cta-button">
-
-        <a href="#">Live Demo</a>
-
-        <a href="#">Github</a>
-
-    </div>
-
-</div>
-<script>
-
-/*==============================
-    COUNTER ANIMATION
-==============================*/
-
-const counters=document.querySelectorAll(".counter");
-
-const speed=120;
-
-const runCounter=()=>{
-
-counters.forEach(counter=>{
-
-const target=+counter.dataset.target;
-
-const update=()=>{
-
-const value=+counter.innerText;
-
-const increment=Math.ceil(target/speed);
-
-if(value<target){
-
-counter.innerText=value+increment;
-
-requestAnimationFrame(update);
-
-}else{
-
-counter.innerText=target;
-
-}
-
-}
-
-update();
-
-});
-
-}
-
-const counterObserver=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-runCounter();
-
-counterObserver.disconnect();
-
-}
-
-});
-
-});
-
-counterObserver.observe(document.querySelector(".stats-grid"));
-
-
-
-/*==============================
-    PARALLAX EFFECT
-==============================*/
-
-window.addEventListener("scroll",()=>{
-
-const y=window.scrollY;
-
-document.body.style.backgroundPositionY=-(y*0.05)+"px";
-
-});
-
-
-/*==============================
-    HERO IMAGE SHADOW
-==============================*/
-
-const preview=document.querySelector(".project-preview");
-
-preview.addEventListener("mouseenter",()=>{
-
-preview.style.transform="translateY(-10px)";
-
-preview.style.boxShadow="0 30px 70px rgba(216,158,29,.18)";
-
-});
-
-preview.addEventListener("mouseleave",()=>{
-
-preview.style.transform="translateY(0px)";
-
-preview.style.boxShadow="0 20px 60px rgba(0,0,0,.08)";
-
-});
-
-
-/*==============================
-    BUTTON RIPPLE
-==============================*/
-
-document.querySelectorAll(".cta-button a").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="translateY(-4px)";
-
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="translateY(0px)";
-
-});
-
-});
-
-
-/*==============================
-    GALLERY HOVER
-==============================*/
-
-document.querySelectorAll(".gallery img")
-
-.forEach(img=>{
-
-img.addEventListener("mousemove",(e)=>{
-
-const rect=img.getBoundingClientRect();
-
-const x=e.clientX-rect.left;
-
-const y=e.clientY-rect.top;
-
-img.style.transformOrigin=x+"px "+y+"px";
-
-});
-
-});
-
-</script>
+const l=document.getElementById('l'),li=document.getElementById('li');
+document.querySelectorAll('img').forEach(i=>i.onclick=()=>{li.src=i.src;l.style.display='flex';});
+l.onclick=()=>l.style.display='none';
+</script></body></html>
