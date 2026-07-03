@@ -4,8 +4,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}body{background:#F8F5ED;color:#333}
-header{position:fixed;top:0;width:100%;height:85px;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.06);z-index:9}
-.logo{display:flex;gap:12px;align-items:center}.c{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f9e38c,#d79b16,#fff4c0);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.t{font-size:26px;color:#D89E1D;font-weight:700}
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:85px;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
+    z-index:9999;
+}.logo{display:flex;gap:12px;align-items:center}.c{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f9e38c,#d79b16,#fff4c0);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.t{font-size:26px;color:#D89E1D;font-weight:700}
 .page{max-width:1300px;margin:auto;padding:120px 25px 60px}
 /* ================= NAVBAR ================= */
 
@@ -327,12 +334,14 @@ const dropdown=document.getElementById("dropdownMenu");
 
 if(menuBtn){
 
-menuBtn.addEventListener("click",function(e){
+menuBtn.addEventListener("click", function(e){
 
-e.stopPropagation();
+    e.stopPropagation();
 
-menuBtn.classList.toggle("active");
-dropdown.classList.toggle("show");
+    console.log("Hamburger diklik");
+
+    menuBtn.classList.toggle("active");
+    dropdown.classList.toggle("show");
 
 });
 
