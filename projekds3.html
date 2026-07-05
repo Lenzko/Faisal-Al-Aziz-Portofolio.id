@@ -51,7 +51,15 @@ background:#D89E1D;
 border-radius:10px;
 transition:.35s;
 }
+.project-description{
+    text-align: justify;
+    line-height: 1.9;
+    font-size: 16px;
+}
 
+.project-description p{
+    margin-bottom: 22px;
+}
 .menu-btn.active span:nth-child(1){
 transform:translateY(9px) rotate(45deg);
 }
@@ -113,7 +121,47 @@ box-shadow:0 10px 25px rgba(239,179,46,.35);
 transition:.3s;
 z-index:999;
 }
+.section{
+    margin-top:35px;
+    background:#fff;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
+.project-card{
+    margin-top:20px;
+    background:linear-gradient(180deg,#FFFDF8 0%,#FFFFFF 100%);
+    border:1px solid rgba(216,158,29,.15);
+    border-radius:22px;
+    padding:35px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.05),
+        0 5px 12px rgba(216,158,29,.08);
+}
+
+.project-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:6px;
+    height:100%;
+    background:linear-gradient(#F7D46C,#D89E1D);
+}
+
+.project-description{
+    text-align:justify;
+    line-height:1.95;
+    color:#555;
+    padding-left:18px;
+}
+
+.project-description p:last-child{
+    margin-bottom:0;
+}
 .floating-home:hover{
 transform:translateY(-5px) scale(1.05);
 background:#D89E1D;
@@ -140,7 +188,7 @@ height:22px;
     width:100%;
     max-width:520px;
 
-    height:680px;
+    height:720px;
 
     margin:auto;
 
@@ -213,7 +261,7 @@ box-shadow:
 }
 h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 0;background:#FFF4D6;padding:10px 18px;border-radius:999px;color:#B57C00;font-weight:700}
 .info{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:20px 0}.box{background:#fff;padding:20px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
-.sec{margin-top:30px;background:#fff;padding:35px;border-radius:22px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.section{margin-top:30px;background:#fff;padding:35px;border-radius:22px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
 .tech span{display:inline-block;background:#FFF4D6;padding:10px 15px;border-radius:50px;margin:6px;font-weight:700}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery img{width:100%;height:180px;object-fit:cover;border-radius:14px;cursor:pointer;transition:.3s}.gallery img:hover{transform:scale(1.03)}
 .light{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center}.light img{max-width:95%;max-height:95%}
@@ -273,10 +321,10 @@ h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 
 
         <h1>Detail <span>Project</span></h1>
 
-        <div class='badge'>Medical Information System</div>
+        <div class='badge'>Dashboard Logist Tahunan Terintegrasi</div>
 
         <p>
-            -
+            Dashboard logistik terintegrasi yang dikembangkan untuk menghubungkan tiga divisi dalam satu platform terpusat. Sistem memudahkan pemantauan distribusi, pengelolaan biaya operasional, dan penyajian data logistik secara real-time melalui visualisasi yang interaktif dan mudah dipahami.
         </p>
 
         <div class='info'>
@@ -288,17 +336,17 @@ h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 
 
             <div class='box'>
                 <b>Durasi</b><br>
-                3 Days
+                ±3 Hari
             </div>
 
             <div class='box'>
                 <b>Client</b><br>
-                Mikrobiologi RSCM
+                CRU RSCM
             </div>
 
             <div class='box'>
                 <b>Platform</b><br>
-                Dinamic Data
+                Google Sheets
             </div>
 
         </div>
@@ -306,11 +354,31 @@ h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 
     </div>
 
 </div>
-<div class='sec'><h2>Tentang Project</h2><br><p><b></b></p></div>
-<div class='sec'><h2>Teknologi</h2><div class='tech'><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>Google Apps Script</span></div></div>
+<div class="section">
+
+    <h2>Tentang Project</h2>
+
+    <div class="project-card">
+
+        <div class="project-description">
+
+            <p>
+                Dashboard berbasis web yang dikembangkan untuk mengintegrasikan dan memantau data logistik dari 3 divisi dalam satu platform terpusat. Sistem menyajikan informasi mengenai stok, distribusi, status pengiriman, serta indikator operasional melalui visualisasi data yang interaktif sehingga memudahkan proses monitoring dan pengambilan keputusan.
+            </p>
+            <p>
+                Dirancang dengan antarmuka yang modern dan responsif, dashboard memungkinkan pengguna mengakses informasi logistik secara cepat, akurat, dan terstruktur. Fokus utama pengembangan adalah meningkatkan efisiensi pengelolaan logistik, mempermudah pelacakan data, serta menyajikan informasi operasional secara real-time.
+            </p>
+
+
+        </div>
+
+    </div>
+<div class='light' id='l'>
+</div>
+</div><div class='section'><h2>Google Sheets</h2><div class='tech'><span>Google Sheets</span><span>Flaticon</span><span>Image Editor</span><span>Gif Maker</span>
 <div class='sec'><h2>Galeri</h2><br><div class='gallery'><img src='#.avif'><img src='#.avif'><img src='#.avif'><img src='#.avif'></div></div>
 </div>
-<div class='light' id='l'><img id='li'></div>
+<img id='li'></div>
 <a href="index.html" class="floating-home">
 
 <svg xmlns="http://www.w3.org/2000/svg"
