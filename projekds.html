@@ -121,7 +121,47 @@ box-shadow:0 10px 25px rgba(239,179,46,.35);
 transition:.3s;
 z-index:999;
 }
+.section{
+    margin-top:35px;
+    background:#fff;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
+.project-card{
+    margin-top:20px;
+    background:linear-gradient(180deg,#FFFDF8 0%,#FFFFFF 100%);
+    border:1px solid rgba(216,158,29,.15);
+    border-radius:22px;
+    padding:35px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.05),
+        0 5px 12px rgba(216,158,29,.08);
+}
+
+.project-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:6px;
+    height:100%;
+    background:linear-gradient(#F7D46C,#D89E1D);
+}
+
+.project-description{
+    text-align:justify;
+    line-height:1.95;
+    color:#555;
+    padding-left:18px;
+}
+
+.project-description p:last-child{
+    margin-bottom:0;
+}
 .floating-home:hover{
 transform:translateY(-5px) scale(1.05);
 background:#D89E1D;
@@ -314,24 +354,32 @@ h1{font-size:52px}h1 span{color:#D89E1D}.badge{display:inline-block;margin:15px 
     </div>
 
 </div>
-</div><div class="section">
+</div>
+<div class="section">
+
     <h2>Tentang Project</h2>
-    <br>
 
-    <div class="project-description">
+    <div class="project-card">
 
-        <p>
-            Dashboard berbasis web yang dirancang untuk menyajikan dan memvisualisasikan data penelitian genomik penyakit metabolik secara interaktif. Aplikasi ini membantu peneliti dan tenaga kesehatan dalam memantau informasi penelitian, mengeksplorasi dataset, serta memperoleh wawasan melalui tampilan yang modern, responsif, dan mudah dipahami.
-        </p>
+        <div class="project-description">
 
-        <p>
-            Antarmuka dashboard dikembangkan dengan fokus pada pengalaman pengguna (User Experience) dan penyajian informasi yang efisien. Berbagai komponen visual seperti kartu statistik, grafik interaktif, tabel data, serta panel navigasi disusun untuk mempermudah analisis dan interpretasi data penelitian. Desain yang responsif memastikan dashboard dapat diakses dengan nyaman melalui berbagai ukuran perangkat.
-        </p>
-        <p>
-            Dalam proyek ini saya berperan sebagai pengembang frontend sekaligus perancang antarmuka, mulai dari perencanaan tata letak, implementasi komponen dashboard, pengembangan visualisasi data, hingga optimalisasi tampilan agar memberikan pengalaman pengguna yang intuitif dan profesional.
-        </p>
+            <p>
+                Dashboard berbasis web yang dirancang untuk menyajikan dan memvisualisasikan data penelitian genomik penyakit metabolik secara interaktif. Aplikasi ini membantu peneliti dan tenaga kesehatan dalam memantau informasi penelitian, mengeksplorasi dataset, serta memperoleh wawasan melalui tampilan yang modern, responsif, dan mudah dipahami.
+            </p>
+
+            <p>
+                Antarmuka dashboard dikembangkan dengan fokus pada pengalaman pengguna (User Experience) dan penyajian informasi yang efisien. Berbagai komponen visual seperti kartu statistik, grafik interaktif, tabel data, serta panel navigasi disusun untuk mempermudah analisis dan interpretasi data penelitian. Desain yang responsif memastikan dashboard dapat diakses dengan nyaman melalui berbagai ukuran perangkat.
+            </p>
+
+            <p>
+                Dalam proyek ini saya berperan sebagai pengembang frontend sekaligus perancang antarmuka, mulai dari perencanaan tata letak, implementasi komponen dashboard, pengembangan visualisasi data, hingga optimalisasi tampilan agar memberikan pengalaman pengguna yang intuitif dan profesional.
+            </p>
+
+        </div>
 
     </div>
+
+</div>
 </div><div class='sec'><h2>Google Sheets</h2><div class='tech'><span>Flaticon</span><span>Image Editor</span>Gif Maker<span></span><span></span><span></span><span></span><span></span></div></div>
 <div class='sec'><h2>Galeri</h2><br><div class='gallery'><img src='#.avif'><img src='#.avif'><img src='#.avif'><img src='#.avif'></div></div>
 </div>
