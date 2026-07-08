@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detail Laporan | Faisal Al Aziz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+body{
+
+background:#F8F5ED;
+
+overflow-x:hidden;
+
+overflow-y:auto;
+
+min-height:100vh;
+
+}
+html{
+scroll-behavior:smooth;
+}
+.floating-home{
+position:fixed;
+right:30px;
+bottom:30px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#EFB32E;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(239,179,46,.35);
+transition:.3s;
+z-index:999;
+}
+.floating-home:hover{
+transform:translateY(-5px) scale(1.05);
+background:#D89E1D;
+}
+.floating-home{
+width:55px;
+height:55px;
+right:20px;
+bottom:20px;
+}
+
+.floating-home svg{
+width:22px;
+height:22px;
+}
+body{
+
+background:#F8F5ED;
+color:#333;
+
+overflow-y:auto;
+overflow-x:hidden;
+
+}
+
+/*================ HEADER =================*/
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:85px;
+
+background:#fff;
+
+box-shadow:0 2px 15px rgba(0,0,0,.05);
+
+z-index:999;
+
+}
+
+.navbar{
+
+max-width:1400px;
+
+height:100%;
+
+margin:auto;
+
+padding:0 40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+/*================ LOGO =================*/
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo-circle{
+
+width:52px;
+height:52px;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#FFE58D,
+#D89E1D,
+#FFF3C3
+);
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+color:#fff;
+
+font-size:28px;
+font-weight:800;
+
+}
+
+.logo-text{
+
+font-size:25px;
+font-weight:700;
+color:#D89E1D;
+
+}
+
+/*================ HAMBURGER =================*/
+
+.menu-dropdown{
+
+position:relative;
+
+}
+
+.menu-btn{
+
+width:50px;
+height:50px;
+
+border:none;
+background:transparent;
+
+cursor:pointer;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+gap:6px;
+
+}
+
+.menu-btn span{
+
+width:30px;
+height:3px;
+
+background:#D89E1D;
+
+border-radius:20px;
+
+transition:.35s;
+
+}
+
+.menu-btn.active span:nth-child(1){
+
+transform:
+translateY(9px)
+rotate(45deg);
+
+}
+
+.menu-btn.active span:nth-child(2){
+
+opacity:0;
+
+}
+
+.menu-btn.active span:nth-child(3){
+
+transform:
+translateY(-9px)
+rotate(-45deg);
+
+}
+
+.dropdown-content{
+
+position:absolute;
+
+right:0;
+top:65px;
+
+width:250px;
+
+background:#fff;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:
+0 18px 35px rgba(0,0,0,.08);
+
+display:none;
+
+}
+
+.dropdown-content.show{
+
+display:block;
+
+animation:fade .3s;
+
+}
+
+.dropdown-content a{
+
+display:block;
+
+padding:16px 22px;
+
+text-decoration:none;
+
+color:#555;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.dropdown-content a:hover{
+
+background:#FFF8E8;
+
+padding-left:28px;
+
+color:#D89E1D;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(-10px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/*================ MAIN =================*/
+
+main{
+
+margin-top:85px;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+/*================ HERO =================*/
+
+.hero{
+
+padding:45px 60px;
+
+background:#F8F5ED;
+
+}
+
+.back-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:12px 22px;
+
+background:#fff;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#555;
+
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+transition:.3s;
+
+margin-bottom:25px;
+
+}
+
+.back-btn:hover{
+
+transform:translateY(-3px);
+
+color:#D89E1D;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+color:#222;
+
+margin-bottom:15px;
+
+}
+
+.badges{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+margin-bottom:20px;
+
+}
+
+.badge{
+
+padding:8px 18px;
+
+background:#EFB32E;
+
+border-radius:30px;
+
+color:#fff;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+.hero p{
+
+max-width:900px;
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#666;
+
+margin-bottom:25px;
+
+}
+
+.download-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:16px 28px;
+
+background:#EFB32E;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:700;
+
+transition:.3s;
+
+box-shadow:0 10px 25px rgba(239,179,46,.30);
+
+}
+
+.download-btn:hover{
+
+background:#D89E1D;
+
+transform:translateY(-3px);
+
+}
+
+/*================ PDF SECTION =================*/
+
+.viewer-area{
+
+padding:0 60px 80px;
+
+}
+/*================ PDF VIEWER =================*/
+
+.pdf-wrapper{
+
+    position:sticky;
+    top:95px;
+
+    width:100%;
+
+    height:900px;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+}
+.viewer-header{
+
+height:60px;
+
+background:#fafafa;
+
+border-bottom:1px solid #ececec;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 25px;
+
+flex-shrink:0;
+
+}
+
+.viewer-title{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+font-weight:700;
+
+color:#444;
+
+}
+
+.viewer-dot{
+
+width:12px;
+height:12px;
+border-radius:50%;
+
+}
+
+.red{
+background:#ff5f57;
+}
+
+.yellow{
+background:#ffbd2e;
+}
+
+.green{
+background:#28c840;
+}
+
+.viewer-tools{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+font-size:14px;
+
+color:#777;
+
+}
+
+.pdf-frame{
+
+    flex:1;
+
+    min-height:0;
+
+    overflow:auto;
+
+}
+
+.pdf-frame iframe{
+
+    width:100%;
+    height:100%;
+
+    border:none;
+
+    display:block;
+
+}
+/*================ FLOAT HOME =================*/
+
+.home{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:62px;
+
+height:62px;
+
+border-radius:50%;
+
+background:#EFB32E;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:28px;
+
+box-shadow:0 12px 30px rgba(239,179,46,.35);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+.home:hover{
+
+background:#D89E1D;
+
+transform:translateY(-4px);
+
+}
+position:sticky;
+
+top:100px;
+
+height:calc(100vh - 130px);
+/*================ RESPONSIVE =================*/
+
+@media(max-width:768px){
+
+.navbar{
+
+padding:0 20px;
+
+}
+
+.logo-text{
+
+font-size:20px;
+
+}
+
+.hero{
+
+padding:25px;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.pdf-wrapper{
+
+
+
+background:#fff;
+
+border-radius:22px;
+
+overflow:hidden;
+
+display:flex;
+
+flex-direction:column;
+
+border:1px solid #ececec;
+
+box-shadow:
+0 20px 45px rgba(0,0,0,.08);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<div class="logo-circle">F</div>
+
+<div class="logo-text">
+Faisal Al Aziz
+</div>
+
+</div>
+
+<div class="menu-dropdown">
+
+<button class="menu-btn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+<div class="dropdown-content">
+
+<a href="index.html">Beranda</a>
+<a href="about.html">Tentang Saya</a>
+<a href="pengalaman.html">Pengalaman</a>
+<a href="projects.html">Proyek</a>
+<a href="report.html">Laporan</a>
+<a href="sertifikat.html">Sertifikat</a>
+<a href="organisasi.html">Organisasi</a>
+<a href="cv.html">Curriculum Vitae</a>
+<a href="kontak.html">Kontak</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<a href="report.html" class="back-btn">
+← Kembali ke Daftar Laporan
+</a>
+
+<h1>Pemaparan Tugas Akhir Faisal Al Aziz</h1>
+
+<div class="badges">
+
+<div class="badge">Presentasi</div>
+
+</div>
+
+<p>
+
+-
+
+</p>
+
+
+</section>
+<section class="viewer-area">
+
+<div class="pdf-wrapper">
+
+<div class="viewer-header">
+
+<div class="viewer-title">
+
+<div class="viewer-dot red"></div>
+
+<div class="viewer-dot yellow"></div>
+
+<div class="viewer-dot green"></div>
+
+<span>Preview Laporan PDF</span>
+
+</div>
+
+<div class="viewer-tools">
+
+📄 pemaparan.pdf
+
+</div>
+
+</div>
+
+<div class="pdf-frame">
+
+<iframe
+src="Skripsi_pdf_compressed (1).pdf#toolbar=1&navpanes=0&statusbar=0&view=FitH">
+</iframe>
+
+</div>
+
+</div>
+
+</main>
+
+<a href="index.html" class="floating-home">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="26"
+height="26"
+fill="currentColor"
+viewBox="0 0 16 16">
+
+<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 2 8h1v5a1 1 0 0 0 1 1h3V10h2v4h3a1 1 0 0 0 1-1V8h1a.5.5 0 0 0 .354-.854z"/>
+
+</svg>
+
+</a>
+<script>
+
+/* ===========================================
+   HAMBURGER MENU
+=========================================== */
+
+const menuBtn = document.querySelector(".menu-btn");
+const dropdown = document.querySelector(".dropdown-content");
+
+menuBtn.addEventListener("click",function(e){
+
+    e.stopPropagation();
+
+    menuBtn.classList.toggle("active");
+
+    dropdown.classList.toggle("show");
+
+});
+
+document.addEventListener("click",function(){
+
+    dropdown.classList.remove("show");
+
+    menuBtn.classList.remove("active");
+
+});
+
+
+/* ===========================================
+   CLOSE MENU WHEN LINK CLICK
+=========================================== */
+
+document.querySelectorAll(".dropdown-content a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        dropdown.classList.remove("show");
+
+        menuBtn.classList.remove("active");
+
+    });
+
+});
+
+
+/* ===========================================
+   HERO FADE IN
+=========================================== */
+
+window.addEventListener("load",()=>{
+
+    document.querySelector(".hero").animate(
+
+    [
+
+        {
+            opacity:0,
+            transform:"translateY(30px)"
+        },
+
+        {
+            opacity:1,
+            transform:"translateY(0)"
+        }
+
+    ],
+
+    {
+
+        duration:700,
+        easing:"ease-out",
+        fill:"forwards"
+
+    });
+
+});
+
+
+/* ===========================================
+   DOWNLOAD BUTTON EFFECT
+=========================================== */
+
+const downloadBtn=document.querySelector(".download-btn");
+
+downloadBtn.addEventListener("mouseenter",()=>{
+
+    downloadBtn.style.boxShadow="0 18px 40px rgba(239,179,46,.45)";
+
+});
+
+downloadBtn.addEventListener("mouseleave",()=>{
+
+    downloadBtn.style.boxShadow="0 10px 25px rgba(239,179,46,.30)";
+
+});
+
+
+/* ===========================================
+   FLOAT HOME HOVER
+=========================================== */
+
+const home=document.querySelector(".home");
+
+home.addEventListener("mouseenter",()=>{
+
+    home.style.transform="translateY(-5px) scale(1.08)";
+
+});
+
+home.addEventListener("mouseleave",()=>{
+
+    home.style.transform="translateY(0) scale(1)";
+
+});
+
+
+/* ===========================================
+   PDF VIEWER EFFECT
+=========================================== */
+
+const viewer=document.querySelector(".pdf-wrapper");
+
+viewer.addEventListener("mouseenter",()=>{
+
+    viewer.style.boxShadow="0 30px 70px rgba(216,158,29,.18)";
+
+});
+
+viewer.addEventListener("mouseleave",()=>{
+
+    viewer.style.boxShadow="0 18px 45px rgba(0,0,0,.08)";
+
+});
+
+
+/* ===========================================
+   DISABLE PAGE SCROLL
+=========================================== */
+
+
+
+/* ===========================================
+   KEYBOARD SHORTCUT
+=========================================== */
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        dropdown.classList.remove("show");
+
+        menuBtn.classList.remove("active");
+
+    }
+
+});
+
+
+/* ===========================================
+   RESPONSIVE FIX
+=========================================== */
+
+
+resizePDF();
+
+window.addEventListener("resize",resizePDF);
+
+</script>
+
+</body>
+</html>
