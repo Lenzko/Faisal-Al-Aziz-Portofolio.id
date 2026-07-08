@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Daftar Laporan | Faisal Al Aziz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#F8F5ED;
+color:#333;
+}
+
+/*================ HEADER ================*/
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:85px;
+background:#fff;
+box-shadow:0 2px 15px rgba(0,0,0,.06);
+z-index:999;
+}
+
+.navbar{
+max-width:1300px;
+height:100%;
+margin:auto;
+padding:0 35px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:52px;
+height:52px;
+border-radius:50%;
+background:linear-gradient(135deg,#FFE38D,#D89E1D);
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
+font-size:28px;
+font-weight:800;
+}
+
+.logo-text{
+font-size:24px;
+font-weight:700;
+color:#D89E1D;
+}
+
+/*================ MENU ================*/
+
+.menu-dropdown{
+position:relative;
+}
+
+.menu-btn{
+width:50px;
+height:50px;
+border:none;
+background:transparent;
+cursor:pointer;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:6px;
+}
+
+.menu-btn span{
+width:30px;
+height:3px;
+background:#D89E1D;
+border-radius:10px;
+transition:.3s;
+}
+
+.menu-btn.active span:nth-child(1){
+transform:translateY(9px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-btn.active span:nth-child(3){
+transform:translateY(-9px) rotate(-45deg);
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+right:0;
+top:65px;
+width:240px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.dropdown-content.show{
+display:block;
+animation:fade .3s;
+}
+
+.dropdown-content a{
+display:block;
+padding:16px 22px;
+text-decoration:none;
+color:#444;
+transition:.3s;
+}
+
+.dropdown-content a:hover{
+background:#FFF7E6;
+color:#D89E1D;
+padding-left:28px;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(-10px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/*================ HERO ================*/
+
+.hero{
+padding-top:140px;
+padding-bottom:40px;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+color:#222;
+margin-bottom:15px;
+}
+
+.hero span{
+color:#D89E1D;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+color:#666;
+}
+
+/*================ REPORT ================*/
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 25px 80px;
+}
+
+.report-card{
+
+background:#fff;
+border-radius:22px;
+padding:30px;
+margin-bottom:28px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+transition:.35s;
+}
+
+.report-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 20px 40px rgba(216,158,29,.18);
+
+}
+
+.left{
+display:flex;
+gap:20px;
+align-items:flex-start;
+flex:1;
+}
+
+.icon{
+
+width:70px;
+height:70px;
+border-radius:18px;
+
+background:#FFF5D7;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:34px;
+
+}
+
+.info h2{
+font-size:24px;
+margin-bottom:8px;
+}
+
+.badge{
+
+display:inline-block;
+
+background:#EFB32E;
+
+color:#fff;
+
+padding:6px 14px;
+
+border-radius:40px;
+
+font-size:13px;
+
+font-weight:600;
+
+margin-bottom:15px;
+}
+
+.info p{
+
+line-height:1.7;
+
+color:#666;
+
+}
+
+.btn{
+
+padding:14px 28px;
+
+background:#EFB32E;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:700;
+
+transition:.3s;
+
+white-space:nowrap;
+
+}
+
+.btn:hover{
+
+background:#D89E1D;
+
+transform:translateY(-2px);
+
+}
+
+/*================ FLOAT HOME ================*/
+
+.home{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+background:#EFB32E;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:28px;
+
+box-shadow:0 12px 30px rgba(239,179,46,.4);
+
+transition:.3s;
+
+}
+
+.home:hover{
+
+transform:translateY(-5px);
+
+background:#D89E1D;
+
+}
+
+/*================ RESPONSIVE ================*/
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.report-card{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.left{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+.logo-text{
+font-size:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<div class="logo-circle">F</div>
+
+<div class="logo-text">
+Faisal Al Aziz
+</div>
+
+</div>
+
+<div class="menu-dropdown">
+
+<button class="menu-btn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+<div class="dropdown-content">
+
+<a href="index.html">Beranda</a>
+<a href="about.html">Tentang Saya</a>
+<a href="pengalaman.html">Pengalaman</a>
+<a href="projects.html">Proyek</a>
+<a href="report.html">Laporan</a>
+<a href="sertifikat.html">Sertifikat</a>
+<a href="organisasi.html">Organisasi</a>
+<a href="cv.html">Curriculum Vitae</a>
+<a href="kontak.html">Kontak</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>Daftar <span>Laporan</span></h1>
+
+<p>
+Dokumentasi laporan akademik, magang, dashboard,
+serta pengembangan sistem informasi yang pernah saya kerjakan.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="report-card">
+
+<div class="left">
+
+<div class="icon">📄</div>
+
+<div class="info">
+
+<h2>Laporan Magang RSCM</h2>
+
+<div class="badge">Magang • 2026</div>
+
+<p>
+Laporan kegiatan magang mengenai administrasi data,
+digitalisasi proses kerja, dashboard, serta pengembangan
+sistem informasi selama program MagangHub Kemnaker di RSCM.
+</p>
+
+</div>
+
+</div>
+
+<a href="laporan-magang.pdf" class="btn" target="_blank">
+Lihat PDF
+</a>
+
+</div>
+
+<div class="report-card">
+
+<div class="left">
+
+<div class="icon">📊</div>
+
+<div class="info">
+
+<h2>Dashboard Metabolic</h2>
+
+<div class="badge">Dashboard</div>
+
+<p>
+Dokumentasi dashboard monitoring penelitian metabolic
+beserta visualisasi data dan laporan analitik.
+</p>
+
+</div>
+
+</div>
+
+<a href="#" class="btn">
+Lihat PDF
+</a>
+
+</div>
+
+<div class="report-card">
+
+<div class="left">
+
+<div class="icon">🏥</div>
+
+<div class="info">
+
+<h2>Dashboard Hub DM</h2>
+
+<div class="badge">Dashboard</div>
+
+<p>
+Monitoring kunjungan partisipan penelitian menggunakan
+dashboard interaktif berbasis web.
+</p>
+
+</div>
+
+</div>
+
+<a href="#" class="btn">
+Lihat PDF
+</a>
+
+</div>
+
+<div class="report-card">
+
+<div class="left">
+
+<div class="icon">🚚</div>
+
+<div class="info">
+
+<h2>Dashboard Logistik</h2>
+
+<div class="badge">Dashboard</div>
+
+<p>
+Dashboard monitoring distribusi logistik, stok,
+dan biaya operasional lintas divisi.
+</p>
+
+</div>
+
+</div>
+
+<a href="#" class="btn">
+Lihat PDF
+</a>
+
+</div>
+
+</div>
+
+<a href="index.html" class="home">⌂</a>
+
+<script>
+
+const btn=document.querySelector(".menu-btn");
+const menu=document.querySelector(".dropdown-content");
+
+btn.onclick=function(e){
+
+e.stopPropagation();
+
+btn.classList.toggle("active");
+
+menu.classList.toggle("show");
+
+}
+
+document.addEventListener("click",function(){
+
+btn.classList.remove("active");
+
+menu.classList.remove("show");
+
+});
+
+</script>
+
+</body>
+</html>
