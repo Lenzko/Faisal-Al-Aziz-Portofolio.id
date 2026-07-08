@@ -18,12 +18,18 @@ box-sizing:border-box;
 font-family:'Inter',sans-serif;
 }
 
-html,
+html{
+scroll-behavior:smooth;
+}
+
 body{
-height:100%;
-overflow:hidden;
+
 background:#F8F5ED;
 color:#333;
+
+overflow-y:auto;
+overflow-x:hidden;
+
 }
 
 /*================ HEADER =================*/
@@ -250,11 +256,7 @@ transform:translateY(0);
 
 main{
 
-height:calc(100vh - 85px);
-
 margin-top:85px;
-
-overflow:hidden;
 
 display:flex;
 
@@ -266,11 +268,9 @@ flex-direction:column;
 
 .hero{
 
-padding:35px 60px 20px;
+padding:45px 60px;
 
 background:#F8F5ED;
-
-flex-shrink:0;
 
 }
 
@@ -498,18 +498,19 @@ color:#777;
 
 flex:1;
 
-overflow:hidden;
+overflow:auto;
 
 }
 
 .pdf-frame iframe{
 
 width:100%;
+
 height:100%;
 
 border:none;
 
-background:white;
+display:block;
 
 }
 /*================ FLOAT HOME =================*/
@@ -586,9 +587,28 @@ font-size:30px;
 
 }
 
-.viewer-area{
+.pdf-wrapper{
 
-padding:0 20px 20px;
+position:sticky;
+
+top:100px;
+
+height:calc(100vh - 130px);
+
+background:#fff;
+
+border-radius:22px;
+
+overflow:hidden;
+
+display:flex;
+
+flex-direction:column;
+
+border:1px solid #ececec;
+
+box-shadow:
+0 20px 45px rgba(0,0,0,.08);
 
 }
 
@@ -712,8 +732,7 @@ target="_blank">
 <div class="pdf-frame">
 
 <iframe
-src="LAPORAN KEGIATAN MAGANG_FAISAL AL AZIZ_2109007_compressed.pdf
-#toolbar=1&navpanes=0&statusbar=0&view=FitH">
+src="LAPORAN KEGIATAN MAGANG_FAISAL AL AZIZ_2109007_compressed.pdf#toolbar=1&navpanes=0&statusbar=0&view=FitH">
 </iframe>
 
 </div>
@@ -864,15 +883,6 @@ viewer.addEventListener("mouseleave",()=>{
    DISABLE PAGE SCROLL
 =========================================== */
 
-window.addEventListener("wheel",(e)=>{
-
-    if(!e.target.closest(".pdf-frame")){
-
-        e.preventDefault();
-
-    }
-
-},{passive:false});
 
 
 /* ===========================================
@@ -896,19 +906,6 @@ document.addEventListener("keydown",(e)=>{
    RESPONSIVE FIX
 =========================================== */
 
-function resizePDF(){
-
-    const header=85;
-
-    const hero=document.querySelector(".hero").offsetHeight;
-
-    const viewer=document.querySelector(".viewer-area");
-
-    viewer.style.height=
-
-    (window.innerHeight-header-hero)+"px";
-
-}
 
 resizePDF();
 
