@@ -31,7 +31,38 @@ min-height:100vh;
 html{
 scroll-behavior:smooth;
 }
+.floating-home{
+position:fixed;
+right:30px;
+bottom:30px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#EFB32E;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(239,179,46,.35);
+transition:.3s;
+z-index:999;
+}
+.floating-home:hover{
+transform:translateY(-5px) scale(1.05);
+background:#D89E1D;
+}
+.floating-home{
+width:55px;
+height:55px;
+right:20px;
+bottom:20px;
+}
 
+.floating-home svg{
+width:22px;
+height:22px;
+}
 body{
 
 background:#F8F5ED;
@@ -737,8 +768,18 @@ src="LAPORAN KEGIATAN MAGANG_FAISAL AL AZIZ_2109007_compressed.pdf#toolbar=1&nav
 
 </main>
 
-<a href="index.html" class="home">
-⌂
+<a href="index.html" class="floating-home">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="26"
+height="26"
+fill="currentColor"
+viewBox="0 0 16 16">
+
+<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 2 8h1v5a1 1 0 0 0 1 1h3V10h2v4h3a1 1 0 0 0 1-1V8h1a.5.5 0 0 0 .354-.854z"/>
+
+</svg>
+
 </a>
 <script>
 
