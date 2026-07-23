@@ -299,10 +299,19 @@ transform:translateY(0);
 
 
 .icon{
-
-font-size:80px;
-
+font-size:90px;
 margin-bottom:25px;
+animation:float 2.5s ease-in-out infinite;
+}
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
 
 }
 
@@ -310,9 +319,11 @@ margin-bottom:25px;
 
 h1{
 
-font-size:45px;
+font-size:52px;
 
 font-weight:800;
+
+letter-spacing:2px;
 
 color:#222;
 
@@ -321,7 +332,10 @@ color:#222;
 
 h1 span{
 
-color:#EFB32E;
+background:linear-gradient(135deg,#EFB32E,#D89E1D);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 
 }
 
@@ -329,13 +343,19 @@ color:#EFB32E;
 
 p{
 
-margin-top:20px;
+margin-top:25px;
 
 font-size:18px;
 
-line-height:1.8;
+line-height:1.9;
 
 color:#666;
+
+max-width:520px;
+
+margin-left:auto;
+
+margin-right:auto;
 
 }
 
