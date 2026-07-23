@@ -10,13 +10,66 @@
 
 <style>
 /* ================= CERTIFICATE BUTTON ================= */
+.tools{
 
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-top:15px;
+
+}
+
+.tools span{
+
+background:#FFF3D6;
+
+color:#B47C00;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+.job-list{
+
+padding-left:22px;
+
+line-height:1.8;
+
+}
+
+.job-list li{
+
+margin-bottom:12px;
+
+}
 .certificate-btn-wrapper{
 display:flex;
 justify-content:center;
 margin-top:50px;
 }
+.info-item{
 
+margin-bottom:16px;
+
+}
+
+.info-item b{
+
+color:#222;
+
+display:block;
+
+margin-bottom:4px;
+
+}
 .description-box p{
 margin-bottom:14px;
 }
@@ -404,9 +457,10 @@ margin-bottom:35px;
 }
 
 .preview{
-width:210px;
-height:135px;
-border-radius:18px;
+width:100%;
+max-width:320px;
+height:190px;
+left:50%;
 }
 
 .preview.active{
@@ -415,12 +469,19 @@ transform:translate(-50%,-50%) scale(1);
 
 .preview.left,
 .preview.right{
-opacity:0;
+opacity:none;
 }
 
 .description-box{
-padding:22px;
-border-radius:18px;
+
+width:100%;
+
+padding:24px;
+
+border-radius:20px;
+
+margin-bottom:60px;
+
 }
 
 .description-box h2{
@@ -435,10 +496,11 @@ margin:20px 0 12px;
 }
 
 .description-box p{
-font-size:15px;
-line-height:1.8;
-text-align:left;
-margin-bottom:12px;
+
+font-size:16px;
+
+line-height:1.9;
+
 }
 
 .certificate-btn{
@@ -542,21 +604,25 @@ Informasi lengkap mengenai pengalaman yang dimiliki
 <div class="description-box">
 
 <h2>Magang MBKM Dinas Kesehatan Kota Semarang</h2>
-<p>
-  Program: MBKM 2025
-</p>  
-<p>
-  Periode Magang: 5 Agustus 2024 – 31 Januari 2025
-</p>
-<p>
-  No. Sertifikat Resmi: B/1344/423.4/I/2025
-</p>
-<p>
-  Tanggal Sertifikat Diterbitkan: 15 Januari 2025
-</p>
-<p>
-  Posisi: Seksi PKPT Bidang Pelayanan Kesehatan
-</p>
+<div class="info-item">
+<b>Program</b><br>
+MBKM 2025
+</div>
+
+<div class="info-item">
+<b>Periode</b><br>
+5 Agustus 2024 – 31 Januari 2025
+</div>
+
+<div class="info-item">
+<b>No. Sertifikat</b><br>
+B/1344/423.4/I/2025
+</div>
+
+<div class="info-item">
+<b>Posisi</b><br>
+Seksi PKPT Bidang Pelayanan Kesehatan
+</div>
 <p>
 Berperan dalam pengelolaan, analisis, dan pengembangan sistem informasi kesehatan untuk mendukung proses pelaporan penyakit di lingkungan Dinas Kesehatan Kota Semarang. Terlibat dalam pengolahan data kesehatan, pengembangan aplikasi berbasis web, otomatisasi laporan, serta visualisasi data untuk meningkatkan efisiensi, akurasi, dan kecepatan penyajian informasi kesehatan.
 </p>
@@ -565,28 +631,33 @@ Berperan dalam pengelolaan, analisis, dan pengembangan sistem informasi kesehata
 <h3>
   Tanggung Jawab dan Pencapaian Utama:
 </h3>
- <p>
-  Mengelola dataset skala besar berisi >500.000 baris (50+ atribut) yang mencakup puluhan juta poin data secara akurat.
-</p>
-<p>
-  Merancang dan membangun Sistem Informasi Manajemen Pelaporan 10 Besar Penyakit Berbasis Web sebagai sarana pengelolaan dan pelaporan data penyakit secara terpusat (efisiensi waktu sebesar 93%). 
-</p>
-<p>
-  Membuat sistem monitoring rating Puskesmas se-Kota Semarang berbasis Excel, (efisiensi waktu sebesar 91,7%). 
-</p>
-<p>
-  Membuat dashboard visualisasi data menggunakan grafik interaktif untuk mempermudah analisis tren penyakit.
-</p>
-<p>
-  Melakukan validasi, pembersihan (data cleaning), dan pengolahan data kesehatan untuk memastikan kualitas data yang digunakan dalam pelaporan.
-</p>
+ <ul class="job-list">
+
+<li>Mengelola dataset lebih dari 500.000 baris.</li>
+
+<li>Membangun Sistem Informasi Pelaporan 10 Besar Penyakit.</li>
+
+<li>Membuat dashboard monitoring Puskesmas.</li>
+
+<li>Melakukan data cleaning dan validasi.</li>
+
+</ul>
  <br></br>
 <h3>
   Tools & Technologies:
 </h3>
-<p>
-PHP Native, MySQL, HTML, CSS, JavaScript, Bootstrap, Microsoft Excel, Google Sheets, Data Visualization & Reporting, Database Management, Health Data Processing</div>
-<!-- BUTTON SERTIFIKAT -->
+<div class="tools">
+
+<span>PHP</span>
+<span>MySQL</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Bootstrap</span>
+<span>Excel</span>
+<span>Google Sheets</span>
+
+</div><!-- BUTTON SERTIFIKAT -->
 <div class="certificate-btn-wrapper">
 
 <a href="sertifikat1.html" class="certificate-btn">
